@@ -1,0 +1,166 @@
+{
+    "links": [
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-anthropic/src/test/java/org/springframework/ai/anthropic/AnthropicChatClientIT.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-anthropic/src/test/java/org/springframework/ai/anthropic/api/tool/MockWeatherService.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-anthropic/src/test/java/org/springframework/ai/anthropic/api/tool/AnthropicApiLegacyToolIT.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-anthropic/src/test/java/org/springframework/ai/anthropic/api/tool/XmlHelper.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-anthropic/src/main/java/org/springframework/ai/anthropic/AnthropicChatClient.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-anthropic/src/main/java/org/springframework/ai/anthropic/AnthropicChatOptions.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-anthropic/src/test/java/org/springframework/ai/anthropic/AnthropicTestConfiguration.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-anthropic/src/main/java/org/springframework/ai/anthropic/api/AnthropicApi.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-anthropic/src/test/java/org/springframework/ai/anthropic/ChatCompletionRequestTests.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-anthropic/src/main/java/org/springframework/ai/anthropic/api/AnthropicApi.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-anthropic/src/test/java/org/springframework/ai/anthropic/AnthropicChatClientIT.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-anthropic/src/main/java/org/springframework/ai/anthropic/api/AnthropicApi.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-anthropic/src/test/java/org/springframework/ai/anthropic/api/AnthropicApiIT.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-anthropic/src/main/java/org/springframework/ai/anthropic/api/AnthropicApi.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-anthropic/src/test/java/org/springframework/ai/anthropic/api/tool/AnthropicApiToolIT.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-anthropic/src/main/java/org/springframework/ai/anthropic/api/AnthropicApi.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-anthropic/src/test/java/org/springframework/ai/anthropic/api/tool/AnthropicApiLegacyToolIT.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-anthropic/src/main/java/org/springframework/ai/anthropic/api/AnthropicApi.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-anthropic/src/test/java/org/springframework/ai/anthropic/aot/AnthropicRuntimeHintsTests.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-anthropic/src/main/java/org/springframework/ai/anthropic/api/AnthropicApi.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-anthropic/src/main/java/org/springframework/ai/anthropic/AnthropicChatClient.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-anthropic/src/main/java/org/springframework/ai/anthropic/api/AnthropicApi.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-anthropic/src/main/java/org/springframework/ai/anthropic/AnthropicChatOptions.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-anthropic/src/main/java/org/springframework/ai/anthropic/api/AnthropicApi.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-anthropic/src/main/java/org/springframework/ai/anthropic/metadata/AnthropicUsage.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-anthropic/src/main/java/org/springframework/ai/anthropic/api/AnthropicApi.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-anthropic/src/main/java/org/springframework/ai/anthropic/metadata/AnthropicChatResponseMetadata.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-anthropic/src/main/java/org/springframework/ai/anthropic/api/AnthropicApi.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-anthropic/src/main/java/org/springframework/ai/anthropic/aot/AnthropicRuntimeHints.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-anthropic/src/main/java/org/springframework/ai/anthropic/api/AnthropicApi.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-anthropic/src/main/java/org/springframework/ai/anthropic/AnthropicChatClient.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-anthropic/src/main/java/org/springframework/ai/anthropic/metadata/AnthropicChatResponseMetadata.java"
+        }
+    ],
+    "nodes": [
+        {
+            "description": "",
+            "fileSize": 1506,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-anthropic/src/test/java/org/springframework/ai/anthropic/AnthropicTestConfiguration.java",
+            "user": "spring-ai-anthropic"
+        },
+        {
+            "description": "",
+            "fileSize": 1817,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-anthropic/src/test/java/org/springframework/ai/anthropic/ChatCompletionRequestTests.java",
+            "user": "spring-ai-anthropic"
+        },
+        {
+            "description": "",
+            "fileSize": 8677,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-anthropic/src/test/java/org/springframework/ai/anthropic/AnthropicChatClientIT.java",
+            "user": "spring-ai-anthropic"
+        },
+        {
+            "description": "",
+            "fileSize": 2658,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-anthropic/src/test/java/org/springframework/ai/anthropic/api/AnthropicApiIT.java",
+            "user": "spring-ai-anthropic"
+        },
+        {
+            "description": "",
+            "fileSize": 2284,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-anthropic/src/test/java/org/springframework/ai/anthropic/api/tool/MockWeatherService.java",
+            "user": "spring-ai-anthropic"
+        },
+        {
+            "description": "",
+            "fileSize": 5375,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-anthropic/src/test/java/org/springframework/ai/anthropic/api/tool/AnthropicApiToolIT.java",
+            "user": "spring-ai-anthropic"
+        },
+        {
+            "description": "",
+            "fileSize": 5939,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-anthropic/src/test/java/org/springframework/ai/anthropic/api/tool/AnthropicApiLegacyToolIT.java",
+            "user": "spring-ai-anthropic"
+        },
+        {
+            "description": "",
+            "fileSize": 4941,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-anthropic/src/test/java/org/springframework/ai/anthropic/api/tool/XmlHelper.java",
+            "user": "spring-ai-anthropic"
+        },
+        {
+            "description": "",
+            "fileSize": 1643,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-anthropic/src/test/java/org/springframework/ai/anthropic/aot/AnthropicRuntimeHintsTests.java",
+            "user": "spring-ai-anthropic"
+        },
+        {
+            "description": "",
+            "fileSize": 15843,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-anthropic/src/main/java/org/springframework/ai/anthropic/AnthropicChatClient.java",
+            "user": "spring-ai-anthropic"
+        },
+        {
+            "description": "",
+            "fileSize": 6403,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-anthropic/src/main/java/org/springframework/ai/anthropic/AnthropicChatOptions.java",
+            "user": "spring-ai-anthropic"
+        },
+        {
+            "description": "",
+            "fileSize": 20230,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-anthropic/src/main/java/org/springframework/ai/anthropic/api/AnthropicApi.java",
+            "user": "spring-ai-anthropic"
+        },
+        {
+            "description": "",
+            "fileSize": 2458,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-anthropic/src/main/java/org/springframework/ai/anthropic/metadata/AnthropicRateLimit.java",
+            "user": "spring-ai-anthropic"
+        },
+        {
+            "description": "",
+            "fileSize": 1723,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-anthropic/src/main/java/org/springframework/ai/anthropic/metadata/AnthropicUsage.java",
+            "user": "spring-ai-anthropic"
+        },
+        {
+            "description": "",
+            "fileSize": 2506,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-anthropic/src/main/java/org/springframework/ai/anthropic/metadata/AnthropicChatResponseMetadata.java",
+            "user": "spring-ai-anthropic"
+        },
+        {
+            "description": "",
+            "fileSize": 1560,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-anthropic/src/main/java/org/springframework/ai/anthropic/aot/AnthropicRuntimeHints.java",
+            "user": "spring-ai-anthropic"
+        }
+    ]
+}

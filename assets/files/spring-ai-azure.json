@@ -1,0 +1,42 @@
+{
+    "links": [
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/vector-stores/spring-ai-azure/src/test/java/org/springframework/ai/vectorstore/azure/AzureAiSearchFilterExpressionConverterTests.java",
+            "target": "/Users/z98459/Desktop/spring-ai/vector-stores/spring-ai-azure/src/main/java/org/springframework/ai/vectorstore/azure/AzureVectorStore.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/vector-stores/spring-ai-azure/src/test/java/org/springframework/ai/vectorstore/azure/AzureVectorStoreIT.java",
+            "target": "/Users/z98459/Desktop/spring-ai/vector-stores/spring-ai-azure/src/main/java/org/springframework/ai/vectorstore/azure/AzureVectorStore.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/vector-stores/spring-ai-azure/src/main/java/org/springframework/ai/vectorstore/azure/AzureAiSearchFilterExpressionConverter.java",
+            "target": "/Users/z98459/Desktop/spring-ai/vector-stores/spring-ai-azure/src/main/java/org/springframework/ai/vectorstore/azure/AzureVectorStore.java"
+        }
+    ],
+    "nodes": [
+        {
+            "description": "",
+            "fileSize": 8379,
+            "id": "/Users/z98459/Desktop/spring-ai/vector-stores/spring-ai-azure/src/test/java/org/springframework/ai/vectorstore/azure/AzureAiSearchFilterExpressionConverterTests.java",
+            "user": "spring-ai-azure"
+        },
+        {
+            "description": "",
+            "fileSize": 12364,
+            "id": "/Users/z98459/Desktop/spring-ai/vector-stores/spring-ai-azure/src/test/java/org/springframework/ai/vectorstore/azure/AzureVectorStoreIT.java",
+            "user": "spring-ai-azure"
+        },
+        {
+            "description": "",
+            "fileSize": 5521,
+            "id": "/Users/z98459/Desktop/spring-ai/vector-stores/spring-ai-azure/src/main/java/org/springframework/ai/vectorstore/azure/AzureAiSearchFilterExpressionConverter.java",
+            "user": "spring-ai-azure"
+        },
+        {
+            "description": "",
+            "fileSize": 14106,
+            "id": "/Users/z98459/Desktop/spring-ai/vector-stores/spring-ai-azure/src/main/java/org/springframework/ai/vectorstore/azure/AzureVectorStore.java",
+            "user": "spring-ai-azure"
+        }
+    ]
+}

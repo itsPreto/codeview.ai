@@ -1,0 +1,32 @@
+{
+    "links": [
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/vector-stores/spring-ai-milvus-store/src/test/java/org/springframework/ai/vectorstore/MilvusEmbeddingDimensionsTests.java",
+            "target": "/Users/z98459/Desktop/spring-ai/vector-stores/spring-ai-milvus-store/src/main/java/org/springframework/ai/vectorstore/MilvusVectorStore.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/vector-stores/spring-ai-milvus-store/src/test/java/org/springframework/ai/vectorstore/MilvusVectorStoreIT.java",
+            "target": "/Users/z98459/Desktop/spring-ai/vector-stores/spring-ai-milvus-store/src/main/java/org/springframework/ai/vectorstore/MilvusVectorStore.java"
+        }
+    ],
+    "nodes": [
+        {
+            "description": "",
+            "fileSize": 2645,
+            "id": "/Users/z98459/Desktop/spring-ai/vector-stores/spring-ai-milvus-store/src/test/java/org/springframework/ai/vectorstore/MilvusEmbeddingDimensionsTests.java",
+            "user": "spring-ai-milvus-store"
+        },
+        {
+            "description": "",
+            "fileSize": 11117,
+            "id": "/Users/z98459/Desktop/spring-ai/vector-stores/spring-ai-milvus-store/src/test/java/org/springframework/ai/vectorstore/MilvusVectorStoreIT.java",
+            "user": "spring-ai-milvus-store"
+        },
+        {
+            "description": "",
+            "fileSize": 17738,
+            "id": "/Users/z98459/Desktop/spring-ai/vector-stores/spring-ai-milvus-store/src/main/java/org/springframework/ai/vectorstore/MilvusVectorStore.java",
+            "user": "spring-ai-milvus-store"
+        }
+    ]
+}

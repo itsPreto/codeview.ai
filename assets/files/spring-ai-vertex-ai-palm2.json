@@ -1,0 +1,108 @@
+{
+    "links": [
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-vertex-ai-palm2/src/test/java/org/springframework/ai/vertexai/palm2/VertexAiPaLm2ChatGenerationClientIT.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-vertex-ai-palm2/src/main/java/org/springframework/ai/vertexai/palm2/api/VertexAiPaLm2Api.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-vertex-ai-palm2/src/test/java/org/springframework/ai/vertexai/palm2/VertexAiPaLm2ChatRequestTests.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-vertex-ai-palm2/src/main/java/org/springframework/ai/vertexai/palm2/api/VertexAiPaLm2Api.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-vertex-ai-palm2/src/test/java/org/springframework/ai/vertexai/palm2/VertexAiPaLm2EmbeddingClientIT.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-vertex-ai-palm2/src/main/java/org/springframework/ai/vertexai/palm2/api/VertexAiPaLm2Api.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-vertex-ai-palm2/src/test/java/org/springframework/ai/vertexai/palm2/api/VertexAiPaLm2ApiIT.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-vertex-ai-palm2/src/main/java/org/springframework/ai/vertexai/palm2/api/VertexAiPaLm2Api.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-vertex-ai-palm2/src/test/java/org/springframework/ai/vertexai/palm2/api/VertexAiPaLm2ApiTests.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-vertex-ai-palm2/src/main/java/org/springframework/ai/vertexai/palm2/api/VertexAiPaLm2Api.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-vertex-ai-palm2/src/test/java/org/springframework/ai/vertexai/palm2/aot/VertexRuntimeHintsTests.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-vertex-ai-palm2/src/main/java/org/springframework/ai/vertexai/palm2/api/VertexAiPaLm2Api.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-vertex-ai-palm2/src/main/java/org/springframework/ai/vertexai/palm2/VertexAiPaLm2ChatClient.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-vertex-ai-palm2/src/main/java/org/springframework/ai/vertexai/palm2/api/VertexAiPaLm2Api.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-vertex-ai-palm2/src/main/java/org/springframework/ai/vertexai/palm2/VertexAiPaLm2EmbeddingClient.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-vertex-ai-palm2/src/main/java/org/springframework/ai/vertexai/palm2/api/VertexAiPaLm2Api.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-vertex-ai-palm2/src/main/java/org/springframework/ai/vertexai/palm2/aot/VertexRuntimeHints.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-vertex-ai-palm2/src/main/java/org/springframework/ai/vertexai/palm2/api/VertexAiPaLm2Api.java"
+        }
+    ],
+    "nodes": [
+        {
+            "description": "",
+            "fileSize": 5289,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-vertex-ai-palm2/src/test/java/org/springframework/ai/vertexai/palm2/VertexAiPaLm2ChatGenerationClientIT.java",
+            "user": "spring-ai-vertex-ai-palm2"
+        },
+        {
+            "description": "",
+            "fileSize": 2792,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-vertex-ai-palm2/src/test/java/org/springframework/ai/vertexai/palm2/VertexAiPaLm2ChatRequestTests.java",
+            "user": "spring-ai-vertex-ai-palm2"
+        },
+        {
+            "description": "",
+            "fileSize": 2777,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-vertex-ai-palm2/src/test/java/org/springframework/ai/vertexai/palm2/VertexAiPaLm2EmbeddingClientIT.java",
+            "user": "spring-ai-vertex-ai-palm2"
+        },
+        {
+            "description": "",
+            "fileSize": 4035,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-vertex-ai-palm2/src/test/java/org/springframework/ai/vertexai/palm2/api/VertexAiPaLm2ApiIT.java",
+            "user": "spring-ai-vertex-ai-palm2"
+        },
+        {
+            "description": "",
+            "fileSize": 5558,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-vertex-ai-palm2/src/test/java/org/springframework/ai/vertexai/palm2/api/VertexAiPaLm2ApiTests.java",
+            "user": "spring-ai-vertex-ai-palm2"
+        },
+        {
+            "description": "",
+            "fileSize": 1645,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-vertex-ai-palm2/src/test/java/org/springframework/ai/vertexai/palm2/aot/VertexRuntimeHintsTests.java",
+            "user": "spring-ai-vertex-ai-palm2"
+        },
+        {
+            "description": "",
+            "fileSize": 4153,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-vertex-ai-palm2/src/main/java/org/springframework/ai/vertexai/palm2/VertexAiPaLm2ChatClient.java",
+            "user": "spring-ai-vertex-ai-palm2"
+        },
+        {
+            "description": "",
+            "fileSize": 1891,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-vertex-ai-palm2/src/main/java/org/springframework/ai/vertexai/palm2/VertexAiPaLm2EmbeddingClient.java",
+            "user": "spring-ai-vertex-ai-palm2"
+        },
+        {
+            "description": "",
+            "fileSize": 3488,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-vertex-ai-palm2/src/main/java/org/springframework/ai/vertexai/palm2/VertexAiPaLm2ChatOptions.java",
+            "user": "spring-ai-vertex-ai-palm2"
+        },
+        {
+            "description": "",
+            "fileSize": 21601,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-vertex-ai-palm2/src/main/java/org/springframework/ai/vertexai/palm2/api/VertexAiPaLm2Api.java",
+            "user": "spring-ai-vertex-ai-palm2"
+        },
+        {
+            "description": "",
+            "fileSize": 1499,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-vertex-ai-palm2/src/main/java/org/springframework/ai/vertexai/palm2/aot/VertexRuntimeHints.java",
+            "user": "spring-ai-vertex-ai-palm2"
+        }
+    ]
+}

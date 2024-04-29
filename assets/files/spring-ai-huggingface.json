@@ -1,0 +1,28 @@
+{
+    "links": [
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-huggingface/src/test/java/org/springframework/ai/huggingface/client/ClientIT.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-huggingface/src/main/java/org/springframework/ai/huggingface/HuggingfaceChatClient.java"
+        }
+    ],
+    "nodes": [
+        {
+            "description": "",
+            "fileSize": 1484,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-huggingface/src/test/java/org/springframework/ai/huggingface/HuggingfaceTestConfiguration.java",
+            "user": "spring-ai-huggingface"
+        },
+        {
+            "description": "",
+            "fileSize": 2435,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-huggingface/src/test/java/org/springframework/ai/huggingface/client/ClientIT.java",
+            "user": "spring-ai-huggingface"
+        },
+        {
+            "description": "",
+            "fileSize": 4375,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-huggingface/src/main/java/org/springframework/ai/huggingface/HuggingfaceChatClient.java",
+            "user": "spring-ai-huggingface"
+        }
+    ]
+}

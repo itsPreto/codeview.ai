@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+  <title>DFP Force Graph</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xterm@4.19.0/css/xterm.css" />
+  <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></script>
+  <script src="https://unpkg.com/d3"></script>
+  <script src="https://unpkg.com/d3-force"></script>
+  <script src="https://unpkg.com/3d-force-graph"></script>
+  <script src="https://unpkg.com/three-spritetext"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked@3.0.7/marked.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dompurify/dist/purify.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/codemirror.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/components/prism-python.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/addon/fold/foldcode.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/addon/fold/foldgutter.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/addon/fold/brace-fold.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/mode/javascript/javascript.min.js"></script>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/addon/fold/foldgutter.min.css">
+</head>
+
+<body>
+  <div class="container" id="container">
+    <div id="graph-container">
+      <button id="fullscreen-bttn">
+        <i class="fa fa-expand"></i>
+      </button>
+
+      <div id="graph-name">currently on: </div>
+
+      <!-- Settings Button -->
+      <i id="settings-icon" class="fas fa-cog"
+        style="position: absolute; top: 20px; right: 100px; cursor: pointer; font-size: 24px; color: white;"></i>
+
+      <!-- Overlay -->
+
+      <button id="navUp-bttn" style='position: absolute;
+        top: 3px;
+        z-index: 3;
+        margin: 20px;
+        margin-left: inherit;
+        width: 50px;
+        color: black;
+        left: 14px;
+        display: inline;'>
+        <i class="fa fa-angle-double-left"></i></button>
+      <div class="search-container">
+        <input type="text" id="search-bar" placeholder="Search...">
+        <ul id="search-results"></ul>
+      </div>
+      <div id="3d-graph"></div>
+    </div>
+    <div class="resizer" id="resizer"></div> <!-- Divider -->
+    <div class="right-panel" id="right-panel">
+      <div id="terminal" class="terminal"></div>
+      <link href="https://cdn.jsdelivr.net/npm/xterm/css/xterm.css" rel="stylesheet">
+      <script src="https://cdn.jsdelivr.net/npm/xterm/lib/xterm.js"></script>
+      <div class="chat">
+        <div class="minimized" id="chatbox-container">
+          <div id="chatbox">
+            <div id="chatbox-header"> [ chat ]
+            </div>
+            <div id="chatbox-content" style="margin-top: 8px;">
+              <div id="messages"></div>
+              <div id="input-container">
+                <textarea id="user-input" rows="3" placeholder="Type your message..."></textarea>
+                <div id="toggleRecording" class="audio-recording-container">
+                  <i class="start-recording-button fa fa-microphone" aria-hidden="true"></i>
+                  <div class="recording-contorl-buttons-container hide">
+                    <i class="cancel-recording-button fa fa-times-circle-o" aria-hidden="true"></i>
+                    <div class="recording-elapsed-time">
+                      <i class="red-recording-dot fa fa-circle" aria-hidden="true"></i>
+                      <p class="elapsed-time"></p>
+                    </div>
+                    <i class="stop-recording-button fa fa-stop-circle-o" aria-hidden="true"></i>
+                  </div>
+                  <div class="text-indication-of-audio-playing-container">
+                    <p class="text-indication-of-audio-playing hide">
+                      playing...<span>.</span><span>.</span><span>.</span></p>
+                  </div>
+                </div>
+                <div class="overlay hide">
+                  <div class="browser-not-supporting-audio-recording-box">
+                    <p>To record audio, use browsers like Chrome and Firefox that support audio recording.</p>
+                    <button type="button" class="close-browser-not-supported-box">Ok.</button>
+                  </div>
+                </div>
+
+                <audio controls class="audio-element hide">
+                </audio>
+                <i id="send-button" class='fa fa-send'></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="editor">
+        <!-- Editor content goes here -->
+        <div id="editor-header">[ edit ]</h2>
+          <i id="save-button" class='fa fa-save'></i>
+        </div>
+        <textarea id="code-editor"></textarea> <!-- CodeMirror will attach to this textarea -->
+      </div>
+    </div>
+  </div>
+
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.132.2/build/three.module.js",
+        "three/addons/": "https://unpkg.com/three@0.132.2/examples/jsm/"
+      }
+    }
+  </script>
+  <script src="./utils.js" type="module"></script>
+  <script src="./components/terminal/terminal.js"></script>
+  <script src="./components/api/api.js" type="module"></script>
+  <script src="./components/chat/chat.js" type="module"></script>
+  <script src="./components/graph/graph.js" type="module"></script>
+  <script src="./components/llama/llama.js" type="module"></script>
+  <script src="./components/audio/audio.js" type="module"></script>
+
+
+  <script type="module">
+    import * as THREE from 'three';
+    // import 'three-spritetext';
+    // index.js: the main file for the application
+
+    import {
+      applyPackageForce, clusterIsolatedNodes, Graph, elem, graphName, topButton, graphContainer,
+      saveButton, searchBar, fullscreenButton, sendButton, chatboxContainer, searchContainer, messages,
+      userInputField, settingsIcon, container, resizer, leftPanel, rightPanel, moveCameraToNode, editorHeader,
+      searchResults, editor, terminalContent, chatboxContent, editorContent, terminalHeader, chatboxHeader,
+    } from './components/graph/graph.js';
+    import {
+      appState, cmdLineApi, sendUserInputToApi, loadFileTrees, fetchRepoDataAsync, fetchFileContent
+    } from './components/api/api.js';
+    import { allowOrbit, getOrbitAllowed, getResizing, linkCounts, setResizing } from './utils.js'
+    import { fetchFileSummary } from './components/llama/llama.js';
+
+    let shiftKeyPressed = false;
+    let currBillboard = null;
+    let nodeInEdit;
+
+    let fullGraphRequested = false;
+
+    // Start loading data/jsons
+    loadFileTrees().then(() => {
+      console.log('Initialization complete. Proceed with application logic.');
+      // Initialize the root level graph (contains the module-module deps)
+      fetchRepoDataAsync('repos_graph', true).then(graphData => {
+        initializeRepoGraph(graphData)
+      }).catch(error => {
+        console.error("Error fetching data: ", error);
+      });
+    });
+
+    function updateGraphName(name) {
+      console.log(`name: ${name}`)
+      graphName.textContent = `currently on: ${name}`
+    }
+
+    function updateTopLevelButton(value) {
+      if (value) {
+        topButton.style.display = 'none';
+      } else {
+        topButton.style.display = 'inline';
+      }
+    }
+
+    // Common Setup for Graph Visual Properties
+    function setupGraphVisuals(graph) {
+      graph.height(window.innerHeight)
+        .width(window.innerWidth / 2 + 100)
+        .linkWidth(3)
+        .backgroundColor('#00000000')
+        .linkCurvature(0.6)
+        .linkDirectionalParticles(1)
+        .linkDirectionalParticleWidth(1)
+        .linkDirectionalParticleSpeed(0.0023)
+        .onBackgroundRightClick(() => {
+          allowOrbit(!getOrbitAllowed());
+        });
+    }
+
+    // Function to format node labels based on their path
+    function formatNodeLabel(node) {
+      const MAX_DISPLAY_LENGTH = 50;
+      const pathParts = node.id.split('/');
+      const visibleLabel = pathParts.length > 2 && node.id.length > MAX_DISPLAY_LENGTH ?
+        `.../${pathParts[pathParts.length - 2]}/${pathParts[pathParts.length - 1]}` : node.id;
+      return `<div><span class='label'>Name: ${visibleLabel}</span></div>`;
+    }
+
+    // Node hover interaction
+    function onNodeHover(node) {
+      if (!node) return;
+      if (shiftKeyPressed && node) {
+        fetchFileContent(node.id)
+          .then(content => {
+            editor.setValue(content);
+            nodeInEdit = node;
+            fetchFileSummary(node.id);
+          })
+          .catch(error => console.error('Error fetching file content:', error));
+      }
+    }
+
+    // Initialize graph with provided data
+    function initializeRepoGraph(graphData) {
+      updateGraphName("root");
+      updateTopLevelButton(false);
+      topButton.style.backgroundColor = 'green';
+      setupGraphVisuals(Graph.graphData(graphData));
+      // addAmbientLight();
+      // addPointLight();
+      // addDirectionalLight();
+      // addSpotLight();
+      Graph.d3Force('packageForce', applyPackageForce)
+        .nodeThreeObject(node => createNodeObject(node, Graph))
+        .onNodeHover(onNodeHover)
+        .nodeThreeObjectExtend(true)
+        .onNodeClick(node => {
+          const distance = 40;
+          const distRatio = 1 + distance / Math.hypot(node.x, node.y, node.z);
+          const newPos = { x: node.x * distRatio, y: node.y * distRatio, z: node.z * distRatio };
+          Graph.cameraPosition(newPos, node, 1900);
+
+          setInterval(async () => {
+            if (appState.isAtTopLevel) {
+              appState.isAtTopLevel = false;
+
+
+              try {
+                await loadNewGraph(node);
+              } catch (error) {
+                console.error(error);
+              }
+            }
+          }, 1900);
+        })
+        .onNodeDragEnd(node => { node.fx = node.x; node.fy = node.y; node.fz = node.z; });
+
+      allowOrbit(true);
+      Graph.d3Force('link').distance(490);
+      Graph.d3Force('charge').strength(-100);
+
+      const distance = 40;
+      const distRatio = 1 + distance / Math.hypot(0, 0, 0);
+      const newPos = { x:0, y:0, z:3000 };
+      Graph.cameraPosition(newPos, graphData.nodes[0], 1900).refresh();;
+
+      Graph.zoomToFit(400)
+      // initOrbitAnimation(Graph);
+    }
+
+
+
+    // Initialize graph with provided data
+    function initializeFullGraph(graphData) {
+      updateGraphName("root");
+      updateTopLevelButton(false);
+      topButton.style.transform = 'rotate(180deg)';
+      topButton.style.backgroundColor = 'yellow';
+      setupGraphVisuals(Graph.graphData(graphData));
+      Graph.d3Force('packageForce', applyPackageForce)
+        .nodeThreeObject(node => createNodeObject(node, Graph))
+        .onNodeHover(onNodeHover)
+        .nodeThreeObjectExtend(true)
+        .onNodeClick(node => {
+          const distance = 40;
+          const distRatio = 1 + distance / Math.hypot(node.x, node.y, node.z);
+          const newPos = { x: node.x * distRatio, y: node.y * distRatio, z: node.z * distRatio };
+          Graph.cameraPosition(newPos, node, 1900);
+
+          setInterval(async () => {
+            if (appState.isAtTopLevel) {
+              appState.isAtTopLevel = false;
+
+
+              try {
+                await loadNewGraph(node);
+              } catch (error) {
+                console.error(error);
+              }
+            }
+          }, 1900);
+        })
+        .onNodeDragEnd(node => { node.fx = node.x; node.fy = node.y; node.fz = node.z; });
+
+      allowOrbit(true);
+      Graph.d3Force('link').distance(490);
+      Graph.d3Force('charge').strength(-100);
+
+      const distance = 40;
+      const distRatio = 1 + distance / Math.hypot(0, 0, 0);
+      const newPos = { x:0, y:0, z:10000 };
+      Graph.cameraPosition(newPos, graphData.nodes[0], 1900).refresh();;
+      // initOrbitAnimation(Graph);
+    }
+
+
+    // Load new graph based on node interaction
+    export async function loadNewGraph(node) {
+      const repoGraphData = await fetchRepoDataAsync(node.id);
+
+      Graph.d3Force('packageForce', applyPackageForce)
+        .nodeThreeObject(node => createNodeObject(node, Graph))
+        .onNodeHover(onNodeHover)
+        .onNodeClick(node => {
+          const distance = 40;
+          const distRatio = 1 + distance / Math.hypot(node.x, node.y, node.z);
+          const newPos = { x: node.x * distRatio, y: node.y * distRatio, z: node.z * distRatio };
+          Graph.cameraPosition(newPos, node, 1900);
+        })
+        .nodeThreeObjectExtend(true)
+        .nodeOpacity(0.1)
+        .linkOpacity(0.1)
+        .onNodeDragEnd(node => { node.fx = node.x; node.fy = node.y; node.fz = node.z; });
+
+      updateTopLevelButton(false);
+      updateGraphName(node.id, Graph);
+      setupGraphVisuals(Graph.graphData(repoGraphData));
+      allowOrbit(true);
+      Graph.d3Force('link').distance(490);
+      Graph.d3Force('charge').strength(-100);
+
+      const distance = 40;
+      const distRatio = 1 + distance / Math.hypot(0, 0, 0);
+      const newPos = { x:0, y:0, z:8000 };
+      Graph.cameraPosition(newPos, Graph.graphData().nodes[0], 1900).refresh();;    
+      
+      // Graph.zoomToFit(400).refresh();  
+      // initOrbitAnimation();
+    }
+
+
+    // Create THREE.js objects for nodes
+    function createNodeObject(node, graph) {
+      const nodeSize = calculateNodeSize(node.fileSize, graph);
+      const material = new THREE.MeshBasicMaterial({ color: node.color });
+      const geometry = new THREE.SphereGeometry(nodeSize, 32, 32);
+      const mesh = new THREE.Mesh(geometry, material);
+      const label = createNodeLabel(node, nodeSize);
+
+      const group = new THREE.Group();
+      group.add(mesh);
+      group.add(label);
+      return group;
+    }
+
+    // Calculate node size based on file size
+    function calculateNodeSize(fileSize, graph) {
+      let minSize = Infinity, maxSize = -Infinity;
+      graph.graphData().nodes.forEach(n => {
+        if (n.fileSize < minSize) minSize = n.fileSize;
+        if (n.fileSize > maxSize) maxSize = n.fileSize;
+      });
+
+      const normalizedSize = minSize !== maxSize ? (fileSize - minSize) / (maxSize - minSize) : 1;
+      return normalizedSize * (40 - 10) + 10; // Scale between 10 and 40
+    }
+
+    // Create labels for nodes
+    function createNodeLabel(node, nodeSize) {
+      const label = new SpriteText(node.id.split('/').pop());
+      label.material.depthWrite = false; // Make sprite background transparent
+      label.color = node.color;
+      label.textHeight = 14;
+      label.position.y = nodeSize + 20;
+      return label;
+    }
+
+    function initOrbitAnimation(graph) {
+      const initialCameraPosition = graph.cameraPosition();
+      let initialRadius = Math.sqrt(
+        initialCameraPosition.x * initialCameraPosition.x +
+        initialCameraPosition.y * initialCameraPosition.y +
+        initialCameraPosition.z * initialCameraPosition.z
+      );
+
+      // Camera orbit setup
+      let angle = 0;
+      // Camera orbit setup
+      setInterval(() => {
+        if (getOrbitAllowed()) {
+          const currentCameraPosition = graph.cameraPosition();
+          const currentRadius = Math.sqrt(
+            currentCameraPosition.x * currentCameraPosition.x +
+            currentCameraPosition.y * currentCameraPosition.y +
+            currentCameraPosition.z * currentCameraPosition.z
+          );
+
+          const radius = Math.abs(currentRadius - initialRadius) > 10 ? currentRadius : initialRadius;
+          angle += Math.PI / 120; // Slower increment
+
+          graph.cameraPosition({
+            x: radius * Math.sin(angle),
+            y: currentCameraPosition.y, // Keep the y-axis stable
+            z: radius * Math.cos(angle)
+          });
+        }
+      }, 20); // Increased interval
+    }
+
+
+    function handleMouseMove(e) {
+      if (!getResizing()) return;
+      // resizer.style.background = '#fa4090'
+      let offset = e.clientX - container.getBoundingClientRect().left;
+      let containerWidth = container.clientWidth;
+      if (offset < 50 || offset > containerWidth - 50) return;  // Minimum width constraint
+      leftPanel.style.width = offset + 'px';
+      Graph.width(offset);
+      rightPanel.style.width = (containerWidth - offset) + 'px';
+    }
+
+    function stopResize(e) {
+      setResizing(false);
+      document.removeEventListener('mousemove', handleMouseMove);
+      document.removeEventListener('mouseup', stopResize);
+      // resizer.style.background = '#333'
+    }
+
+    function populateSearchResults(query) {
+      const matchingNodes = Graph.graphData().nodes.filter(node => node.id.toLowerCase().includes(query.toLowerCase()));
+      searchResults.innerHTML = '';
+      if (matchingNodes.length > 0) {
+        searchResults.parentElement.style.display = 'block';
+      }
+      matchingNodes.forEach(node => {
+        const li = document.createElement('li');
+        const fileName = node.id.split('/').pop(); // extract the file name from the node's id
+        li.textContent = fileName;
+        li.addEventListener('click', () => {
+          searchBar.value = fileName; // set the search bar value to the file name
+          searchResults.innerHTML = '';
+          moveCameraToNode(node);
+        });
+        searchResults.appendChild(li);
+      });
+    }
+
+
+
+    function createFPSCounter() {
+      const counter = document.createElement('div');
+      counter.style.position = 'absolute';
+      counter.style.bottom = '25px';
+      counter.style.right = '20px';
+      counter.style.color = 'white';
+      counter.style.fontSize = '16px';
+      counter.style.zIndex = 2;
+      graphContainer.appendChild(counter);
+
+      let frameCount = 0;
+      let lastUpdate = performance.now();
+      let fps = 0;
+
+      function updateCounter() {
+        frameCount++;
+        const now = performance.now();
+        const delta = now - lastUpdate;
+
+        if (delta >= 1000) {
+          fps = frameCount / delta * 1000;
+          frameCount = 0;
+          lastUpdate = now;
+          counter.textContent = `${Math.round(fps)} FPS`;
+        }
+
+        requestAnimationFrame(updateCounter);
+      }
+
+      updateCounter();
+    }
+
+    let isPastelBackground = false;
+
+    function toggleFullScreen() {
+      if (!document.fullscreenElement) {
+        chatboxContainer.style.display = "none";
+        topButton.style.display = "none";
+        // searchContainer.style.display = "none";
+        graphContainer.requestFullscreen();
+        elem.style.width = screen.width + 'px';
+        elem.style.height = screen.height + 'px';
+
+        // Update graph dimensions
+        Graph.width(screen.width);
+        Graph.height(screen.height);
+      } else {
+        if (document.exitFullscreen) {
+          // Remove event listener before exiting fullscreen
+          document.removeEventListener('fullscreenchange', handleFullscreenChange);
+          document.exitFullscreen();
+        }
+      }
+    }
+
+
+    function toggleOverlay() {
+      var overlay = document.getElementById('overlay');
+      overlay.style.display = overlay.style.display === 'none' ? 'block' : 'none';
+    }
+
+
+
+
+    // Function to handle fullscreen change
+    function handleFullscreenChange() {
+      if (!document.fullscreenElement) {
+        chatboxContainer.style.display = "block";
+        topButton.style.display = "block";
+        // searchContainer.style.display = "block";
+        elem.style.width = '100%';
+        elem.style.height = '100%';
+
+        // Update graph dimensions
+        Graph.width(window.innerWidth / 2);
+        Graph.height(window.innerHeight);
+      }
+    }
+
+    // LISTENERS
+
+    document.addEventListener('DOMContentLoaded', function () {
+
+      settingsIcon.addEventListener('click', toggleOverlay);
+
+
+      // Function to maximize a div and minimize others
+      function maximizeDiv(divToMaximize) {
+        const divs = [terminalContent, chatboxContent, editorContent];
+
+        divs.forEach(div => {
+          if (div === divToMaximize) {
+            div.classList.add('maximized');
+          } else {
+            div.classList.remove('maximized');
+            div.querySelector('.header').nextElementSibling.style.display = 'none';
+          }
+        });
+      }
+
+      // Function to minimize all divs
+      function minimizeAllDivs() {
+        const divs = [terminalContent, chatboxContent, editorContent];
+
+        divs.forEach(div => {
+          div.classList.remove('maximized');
+          div.querySelector('.header').nextElementSibling.style.display = 'block';
+        });
+      }
+
+      // // Add click event listeners to headers
+      // terminalHeader.addEventListener('click', () => {
+      //   if (terminalContent.classList.contains('maximized')) {
+      //     minimizeAllDivs();
+      //   } else {
+      //     maximizeDiv(terminalContent);
+      //   }
+      // });
+
+      // chatboxHeader.addEventListener('click', () => {
+      //   if (chatboxContent.classList.contains('maximized')) {
+      //     minimizeAllDivs();
+      //   } else {
+      //     maximizeDiv(chatboxContent);
+      //   }
+      // });
+
+      // editorHeader.addEventListener('click', () => {
+      //   if (editorContent.classList.contains('maximized')) {
+      //     minimizeAllDivs();
+      //   } else {
+      //     maximizeDiv(editorContent);
+      //   }
+      // });
+
+      // repoUrlsInput.addEventListener('click', cloneAndProcessRepos);
+
+      // localPathInput.addEventListener('click', processLocalPath);
+
+      fullscreenButton.addEventListener('click', toggleFullScreen);
+
+
+      graphContainer.style.width = window.innerWidth / 2;
+
+      elem.style.overflowY = 'hidden';
+      elem.style.overflowX = 'hidden';
+
+      saveButton.addEventListener('click', async () => {
+        const updatedContent = editor.getValue();
+        const currentNodeId = nodeInEdit.id;
+
+        try {
+          await saveFileChanges(currentNodeId, updatedContent);
+          alert('Changes saved successfully');
+        } catch (error) {
+          console.error('Error saving changes:', error);
+          alert('Failed to save changes');
+        }
+      });
+
+      window.addEventListener('keydown', (event) => {
+        if (event.key === 'Shift') {
+          shiftKeyPressed = true;
+        }
+      });
+
+      window.addEventListener('keyup', (event) => {
+        if (event.key === 'Shift') {
+          shiftKeyPressed = false;
+        }
+      });
+
+
+
+      // document.getElementById('terminal-input').addEventListener('keypress', function (event) {
+      //   if (event.key === 'Enter') {
+      //     event.preventDefault(); // Prevent default to stop from any form submission
+      //     const command = this.value;
+      //     this.value = ''; // Clear the input after sending the command
+
+      //     // Display command in terminal output
+      //     const output = document.getElementById('terminal-output');
+      //     output.textContent += '\n$ ' + command;
+      //     output.scrollTop = output.scrollHeight; // Scroll to the bottom
+
+      //     // Send the command to the server
+      //     cmdLineApi(command, output);
+      //   }
+      // });
+
+      resizer.addEventListener('mousedown', () => {
+        setResizing(true);
+        document.addEventListener('mousemove', handleMouseMove);
+        document.addEventListener('mouseup', stopResize);
+      });
+
+
+      elem.addEventListener('mousedown', (event) => {
+        if (event.buttons === 1) {  // Check if only the primary button is pressed
+          allowOrbit(false);
+        }
+      });
+
+      // Add event listener for fullscreen change
+      document.addEventListener('fullscreenchange', handleFullscreenChange);
+
+      createFPSCounter();
+
+      window.addEventListener('resize', () => {
+        // Graph.width(window.innerWidth / 2);
+        Graph.height(window.innerHeight);
+      });
+
+      // overlayContent.addEventListener('click', toggleOverlay);
+
+      userInputField.addEventListener('keydown', async e => {
+        if (e.keyCode === 13 && !e.shiftKey) {
+          e.preventDefault();
+
+          // Check that field has value before submitting
+          if (userInputField.value.trim() !== '') {
+            await sendUserInputToApi();
+          }
+        }
+      });
+
+      document.getElementById('toggleRecording').addEventListener('click', toggleRecording);
+
+
+
+      sendButton.addEventListener('click', async () => {
+        await sendUserInputToApi();
+      });
+
+      topButton.addEventListener('click', async () => {
+        if (!fullGraphRequested) {
+          // Fetch and load full graph data
+          fetchRepoDataAsync('files_graph', true).then(graphData => {
+            initializeFullGraph(graphData)
+          }).catch(error => {
+            console.error("Error fetching data: ", error);
+          });
+          fullGraphRequested = true;
+        } else {
+          // Fetch and load top level data
+          fetchRepoDataAsync('repos_graph', true).then(graphData => {
+            initializeRepoGraph(graphData)
+          }).catch(error => {
+            console.error("Error fetching data: ", error);
+          });
+          fullGraphRequested = false;
+        }
+      });
+
+      searchBar.addEventListener('input', () => {
+        const query = searchBar.value;
+
+        if (query === '') {
+          searchResults.innerHTML = '';
+        } else {
+          populateSearchResults(query);
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+{
+    "links": [
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/vector-stores/spring-ai-pgvector-store/src/test/java/org/springframework/ai/vectorstore/PgVectorStoreIT.java",
+            "target": "/Users/z98459/Desktop/spring-ai/vector-stores/spring-ai-pgvector-store/src/main/java/org/springframework/ai/vectorstore/PgVectorStore.java"
+        }
+    ],
+    "nodes": [
+        {
+            "description": "",
+            "fileSize": 12985,
+            "id": "/Users/z98459/Desktop/spring-ai/vector-stores/spring-ai-pgvector-store/src/test/java/org/springframework/ai/vectorstore/PgVectorStoreIT.java",
+            "user": "spring-ai-pgvector-store"
+        },
+        {
+            "description": "",
+            "fileSize": 2286,
+            "id": "/Users/z98459/Desktop/spring-ai/vector-stores/spring-ai-pgvector-store/src/test/java/org/springframework/ai/vectorstore/PgVectorEmbeddingDimensionsTests.java",
+            "user": "spring-ai-pgvector-store"
+        },
+        {
+            "description": "",
+            "fileSize": 13362,
+            "id": "/Users/z98459/Desktop/spring-ai/vector-stores/spring-ai-pgvector-store/src/main/java/org/springframework/ai/vectorstore/PgVectorStore.java",
+            "user": "spring-ai-pgvector-store"
+        }
+    ]
+}

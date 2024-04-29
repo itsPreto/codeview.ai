@@ -1,0 +1,794 @@
+{
+    "links": [
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/chat/OpenAiChatClientIT.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/OpenAiTestConfiguration.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/acme/AcmeIT.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/OpenAiTestConfiguration.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/image/OpenAiImageClientIT.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/OpenAiTestConfiguration.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/audio/transcription/OpenAiTranscriptionClientIT.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/OpenAiTestConfiguration.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/audio/speech/OpenAiSpeechClientIT.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/OpenAiTestConfiguration.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/ChatCompletionRequestTests.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/api/tool/MockWeatherService.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/chat/OpenAiChatClientIT.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/api/tool/MockWeatherService.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/chat/OpenAiChatClientIT.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/testutils/AbstractIT.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/acme/AcmeIT.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/testutils/AbstractIT.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/image/OpenAiImageClientIT.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/testutils/AbstractIT.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/audio/transcription/OpenAiTranscriptionClientIT.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/testutils/AbstractIT.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/audio/speech/OpenAiSpeechClientIT.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/testutils/AbstractIT.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/chat/OpenAiRetryTests.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/OpenAiImageClient.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/image/OpenAiImageClientWithImageResponseMetadataTests.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/OpenAiImageClient.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/audio/speech/OpenAiSpeechClientIT.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/OpenAiAudioSpeechOptions.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/audio/speech/OpenAiSpeechClientWithSpeechResponseMetadataTests.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/OpenAiAudioSpeechOptions.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/audio/speech/SpeechPrompt.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/OpenAiAudioSpeechOptions.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/audio/speech/OpenAiSpeechClientWithSpeechResponseMetadataTests.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/OpenAiAudioSpeechClient.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/testutils/AbstractIT.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/OpenAiAudioSpeechClient.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/chat/OpenAiRetryTests.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/OpenAiEmbeddingClient.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/acme/AcmeIT.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/OpenAiEmbeddingClient.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/embedding/EmbeddingIT.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/OpenAiEmbeddingClient.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/chat/OpenAiRetryTests.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/OpenAiAudioTranscriptionClient.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/audio/transcription/OpenAiTranscriptionClientWithTranscriptionResponseMetadataTests.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/OpenAiAudioTranscriptionClient.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/audio/transcription/TranscriptionClientTests.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/OpenAiAudioTranscriptionClient.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/testutils/AbstractIT.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/OpenAiAudioTranscriptionClient.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/chat/OpenAiRetryTests.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/OpenAiEmbeddingOptions.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/embedding/EmbeddingIT.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/OpenAiEmbeddingOptions.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/chat/OpenAiChatClientIT.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/OpenAiChatOptions.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/chat/OpenAiRetryTests.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/OpenAiChatOptions.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/chat/OpenAiChatClient2IT.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/OpenAiChatOptions.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/chat/OpenAiRetryTests.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/OpenAiAudioTranscriptionOptions.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/audio/transcription/OpenAiTranscriptionClientIT.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/OpenAiAudioTranscriptionOptions.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/chat/OpenAiChatClientWithChatResponseMetadataTests.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/OpenAiChatClient.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/chat/OpenAiRetryTests.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/OpenAiChatClient.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/chat/OpenAiChatClient2IT.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/OpenAiChatClient.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/acme/AcmeIT.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/OpenAiChatClient.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/transformer/MetadataTransformerIT.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/OpenAiChatClient.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/chat/OpenAiRetryTests.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/OpenAiImageOptions.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/chat/OpenAiRetryTests.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/audio/transcription/AudioTranscription.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/OpenAiAudioTranscriptionClient.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/audio/transcription/AudioTranscription.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/chat/OpenAiRetryTests.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/audio/transcription/AudioTranscriptionPrompt.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/OpenAiAudioTranscriptionClient.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/audio/transcription/AudioTranscriptionPrompt.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/chat/OpenAiRetryTests.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/audio/transcription/AudioTranscriptionResponse.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/OpenAiAudioTranscriptionClient.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/audio/transcription/AudioTranscriptionResponse.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/OpenAiTestConfiguration.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/api/OpenAiImageApi.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/chat/OpenAiRetryTests.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/api/OpenAiImageApi.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/image/OpenAiImageClientWithImageResponseMetadataTests.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/api/OpenAiImageApi.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/OpenAiImageClient.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/api/OpenAiImageApi.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/OpenAiImageOptions.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/api/OpenAiImageApi.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/metadata/OpenAiImageResponseMetadata.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/api/OpenAiImageApi.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/aot/OpenAiRuntimeHints.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/api/OpenAiImageApi.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/OpenAiTestConfiguration.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/api/OpenAiAudioApi.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/chat/OpenAiRetryTests.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/api/OpenAiAudioApi.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/audio/transcription/OpenAiTranscriptionClientWithTranscriptionResponseMetadataTests.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/api/OpenAiAudioApi.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/audio/transcription/OpenAiTranscriptionClientIT.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/api/OpenAiAudioApi.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/audio/speech/OpenAiSpeechClientIT.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/api/OpenAiAudioApi.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/audio/speech/OpenAiSpeechClientWithSpeechResponseMetadataTests.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/api/OpenAiAudioApi.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/audio/api/OpenAiAudioApiIT.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/api/OpenAiAudioApi.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/OpenAiAudioSpeechOptions.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/api/OpenAiAudioApi.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/OpenAiAudioSpeechClient.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/api/OpenAiAudioApi.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/OpenAiAudioTranscriptionClient.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/api/OpenAiAudioApi.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/OpenAiAudioTranscriptionOptions.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/api/OpenAiAudioApi.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/metadata/audio/OpenAiAudioSpeechResponseMetadata.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/api/OpenAiAudioApi.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/metadata/audio/OpenAiAudioTranscriptionResponseMetadata.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/api/OpenAiAudioApi.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/aot/OpenAiRuntimeHints.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/api/OpenAiAudioApi.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/OpenAiTestConfiguration.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/api/OpenAiApi.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/ChatCompletionRequestTests.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/api/OpenAiApi.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/chat/OpenAiChatClientWithChatResponseMetadataTests.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/api/OpenAiApi.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/chat/OpenAiChatClientIT.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/api/OpenAiApi.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/chat/OpenAiRetryTests.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/api/OpenAiApi.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/chat/OpenAiChatClient2IT.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/api/OpenAiApi.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/transformer/MetadataTransformerIT.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/api/OpenAiApi.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/api/OpenAiApiIT.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/api/OpenAiApi.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/api/tool/OpenAiApiToolFunctionCallIT.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/api/OpenAiApi.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/aot/OpenAiRuntimeHintsTests.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/api/OpenAiApi.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/OpenAiEmbeddingClient.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/api/OpenAiApi.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/OpenAiChatOptions.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/api/OpenAiApi.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/OpenAiChatClient.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/api/OpenAiApi.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/api/OpenAiStreamFunctionCallingHelper.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/api/OpenAiApi.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/metadata/OpenAiChatResponseMetadata.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/api/OpenAiApi.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/metadata/OpenAiUsage.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/api/OpenAiApi.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/aot/OpenAiRuntimeHints.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/api/OpenAiApi.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/OpenAiAudioSpeechClient.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/api/common/OpenAiApiException.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/OpenAiImageClient.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/metadata/OpenAiImageResponseMetadata.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/metadata/audio/OpenAiAudioTranscriptionResponseMetadata.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/metadata/OpenAiRateLimit.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/metadata/support/OpenAiResponseHeaderExtractor.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/metadata/OpenAiRateLimit.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/image/OpenAiImageClientIT.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/metadata/OpenAiImageGenerationMetadata.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/OpenAiImageClient.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/metadata/OpenAiImageGenerationMetadata.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/OpenAiChatClient.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/metadata/OpenAiChatResponseMetadata.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/audio/speech/OpenAiSpeechClientIT.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/metadata/audio/OpenAiAudioSpeechResponseMetadata.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/audio/speech/OpenAiSpeechClientWithSpeechResponseMetadataTests.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/metadata/audio/OpenAiAudioSpeechResponseMetadata.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/OpenAiAudioSpeechClient.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/metadata/audio/OpenAiAudioSpeechResponseMetadata.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/audio/speech/SpeechResponse.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/metadata/audio/OpenAiAudioSpeechResponseMetadata.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/audio/transcription/OpenAiTranscriptionClientWithTranscriptionResponseMetadataTests.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/metadata/audio/OpenAiAudioTranscriptionResponseMetadata.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/OpenAiAudioTranscriptionClient.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/metadata/audio/OpenAiAudioTranscriptionResponseMetadata.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/audio/transcription/AudioTranscriptionResponse.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/metadata/audio/OpenAiAudioTranscriptionResponseMetadata.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/metadata/support/OpenAiResponseHeaderExtractorTests.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/metadata/support/OpenAiResponseHeaderExtractor.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/OpenAiAudioSpeechClient.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/metadata/support/OpenAiResponseHeaderExtractor.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/OpenAiAudioTranscriptionClient.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/metadata/support/OpenAiResponseHeaderExtractor.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/OpenAiChatClient.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/metadata/support/OpenAiResponseHeaderExtractor.java"
+        }
+    ],
+    "nodes": [
+        {
+            "description": "",
+            "fileSize": 2608,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/OpenAiTestConfiguration.java",
+            "user": "spring-ai-openai"
+        },
+        {
+            "description": "",
+            "fileSize": 5441,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/ChatCompletionRequestTests.java",
+            "user": "spring-ai-openai"
+        },
+        {
+            "description": "",
+            "fileSize": 5988,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/chat/OpenAiChatClientWithChatResponseMetadataTests.java",
+            "user": "spring-ai-openai"
+        },
+        {
+            "description": "",
+            "fileSize": 11429,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/chat/OpenAiChatClientIT.java",
+            "user": "spring-ai-openai"
+        },
+        {
+            "description": "",
+            "fileSize": 11323,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/chat/OpenAiRetryTests.java",
+            "user": "spring-ai-openai"
+        },
+        {
+            "description": "",
+            "fileSize": 3580,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/chat/OpenAiChatClient2IT.java",
+            "user": "spring-ai-openai"
+        },
+        {
+            "description": "",
+            "fileSize": 1167,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/chat/ActorsFilms.java",
+            "user": "spring-ai-openai"
+        },
+        {
+            "description": "",
+            "fileSize": 4629,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/acme/AcmeIT.java",
+            "user": "spring-ai-openai"
+        },
+        {
+            "description": "",
+            "fileSize": 8089,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/transformer/MetadataTransformerIT.java",
+            "user": "spring-ai-openai"
+        },
+        {
+            "description": "",
+            "fileSize": 3455,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/embedding/EmbeddingIT.java",
+            "user": "spring-ai-openai"
+        },
+        {
+            "description": "",
+            "fileSize": 2574,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/image/OpenAiImageClientIT.java",
+            "user": "spring-ai-openai"
+        },
+        {
+            "description": "",
+            "fileSize": 4695,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/image/OpenAiImageClientWithImageResponseMetadataTests.java",
+            "user": "spring-ai-openai"
+        },
+        {
+            "description": "",
+            "fileSize": 6008,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/audio/transcription/OpenAiTranscriptionClientWithTranscriptionResponseMetadataTests.java",
+            "user": "spring-ai-openai"
+        },
+        {
+            "description": "",
+            "fileSize": 2915,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/audio/transcription/OpenAiTranscriptionClientIT.java",
+            "user": "spring-ai-openai"
+        },
+        {
+            "description": "",
+            "fileSize": 3058,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/audio/transcription/TranscriptionClientTests.java",
+            "user": "spring-ai-openai"
+        },
+        {
+            "description": "",
+            "fileSize": 4560,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/audio/speech/OpenAiSpeechClientIT.java",
+            "user": "spring-ai-openai"
+        },
+        {
+            "description": "",
+            "fileSize": 5179,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/audio/speech/OpenAiSpeechClientWithSpeechResponseMetadataTests.java",
+            "user": "spring-ai-openai"
+        },
+        {
+            "description": "",
+            "fileSize": 3148,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/audio/api/OpenAiAudioApiIT.java",
+            "user": "spring-ai-openai"
+        },
+        {
+            "description": "",
+            "fileSize": 2264,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/api/RestClientBuilderTests.java",
+            "user": "spring-ai-openai"
+        },
+        {
+            "description": "",
+            "fileSize": 2768,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/api/OpenAiApiIT.java",
+            "user": "spring-ai-openai"
+        },
+        {
+            "description": "",
+            "fileSize": 2599,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/api/tool/MockWeatherService.java",
+            "user": "spring-ai-openai"
+        },
+        {
+            "description": "",
+            "fileSize": 6105,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/api/tool/OpenAiApiToolFunctionCallIT.java",
+            "user": "spring-ai-openai"
+        },
+        {
+            "description": "",
+            "fileSize": 2063,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/metadata/support/OpenAiResponseHeaderExtractorTests.java",
+            "user": "spring-ai-openai"
+        },
+        {
+            "description": "",
+            "fileSize": 3827,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/testutils/AbstractIT.java",
+            "user": "spring-ai-openai"
+        },
+        {
+            "description": "",
+            "fileSize": 1615,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/aot/OpenAiRuntimeHintsTests.java",
+            "user": "spring-ai-openai"
+        },
+        {
+            "description": "",
+            "fileSize": 2804,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/test/java/org/springframework/ai/openai/vectorstore/SimplePersistentVectorStoreIT.java",
+            "user": "spring-ai-openai"
+        },
+        {
+            "description": "",
+            "fileSize": 6383,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/OpenAiImageClient.java",
+            "user": "spring-ai-openai"
+        },
+        {
+            "description": "",
+            "fileSize": 5080,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/OpenAiAudioSpeechOptions.java",
+            "user": "spring-ai-openai"
+        },
+        {
+            "description": "",
+            "fileSize": 6413,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/OpenAiAudioSpeechClient.java",
+            "user": "spring-ai-openai"
+        },
+        {
+            "description": "",
+            "fileSize": 6172,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/OpenAiEmbeddingClient.java",
+            "user": "spring-ai-openai"
+        },
+        {
+            "description": "",
+            "fileSize": 8765,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/OpenAiAudioTranscriptionClient.java",
+            "user": "spring-ai-openai"
+        },
+        {
+            "description": "",
+            "fileSize": 2938,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/OpenAiEmbeddingOptions.java",
+            "user": "spring-ai-openai"
+        },
+        {
+            "description": "",
+            "fileSize": 17325,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/OpenAiChatOptions.java",
+            "user": "spring-ai-openai"
+        },
+        {
+            "description": "",
+            "fileSize": 5313,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/OpenAiAudioTranscriptionOptions.java",
+            "user": "spring-ai-openai"
+        },
+        {
+            "description": "",
+            "fileSize": 14507,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/OpenAiChatClient.java",
+            "user": "spring-ai-openai"
+        },
+        {
+            "description": "",
+            "fileSize": 6280,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/OpenAiImageOptions.java",
+            "user": "spring-ai-openai"
+        },
+        {
+            "description": "",
+            "fileSize": 2137,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/audio/transcription/AudioTranscription.java",
+            "user": "spring-ai-openai"
+        },
+        {
+            "description": "",
+            "fileSize": 2212,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/audio/transcription/AudioTranscriptionPrompt.java",
+            "user": "spring-ai-openai"
+        },
+        {
+            "description": "",
+            "fileSize": 1822,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/audio/transcription/AudioTranscriptionResponse.java",
+            "user": "spring-ai-openai"
+        },
+        {
+            "description": "",
+            "fileSize": 2394,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/audio/speech/SpeechPrompt.java",
+            "user": "spring-ai-openai"
+        },
+        {
+            "description": "",
+            "fileSize": 2124,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/audio/speech/Speech.java",
+            "user": "spring-ai-openai"
+        },
+        {
+            "description": "",
+            "fileSize": 1683,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/audio/speech/SpeechMessage.java",
+            "user": "spring-ai-openai"
+        },
+        {
+            "description": "",
+            "fileSize": 2606,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/audio/speech/SpeechResponse.java",
+            "user": "spring-ai-openai"
+        },
+        {
+            "description": "",
+            "fileSize": 1667,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/audio/speech/SpeechClient.java",
+            "user": "spring-ai-openai"
+        },
+        {
+            "description": "",
+            "fileSize": 1910,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/audio/speech/StreamingSpeechClient.java",
+            "user": "spring-ai-openai"
+        },
+        {
+            "description": "",
+            "fileSize": 1125,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/api/ApiUtils.java",
+            "user": "spring-ai-openai"
+        },
+        {
+            "description": "",
+            "fileSize": 4536,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/api/OpenAiImageApi.java",
+            "user": "spring-ai-openai"
+        },
+        {
+            "description": "",
+            "fileSize": 22986,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/api/OpenAiAudioApi.java",
+            "user": "spring-ai-openai"
+        },
+        {
+            "description": "",
+            "fileSize": 38025,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/api/OpenAiApi.java",
+            "user": "spring-ai-openai"
+        },
+        {
+            "description": "",
+            "fileSize": 7872,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/api/OpenAiStreamFunctionCallingHelper.java",
+            "user": "spring-ai-openai"
+        },
+        {
+            "description": "",
+            "fileSize": 934,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/api/common/OpenAiApiException.java",
+            "user": "spring-ai-openai"
+        },
+        {
+            "description": "",
+            "fileSize": 1195,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/api/common/OpenAiApiClientErrorException.java",
+            "user": "spring-ai-openai"
+        },
+        {
+            "description": "",
+            "fileSize": 1760,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/metadata/OpenAiImageResponseMetadata.java",
+            "user": "spring-ai-openai"
+        },
+        {
+            "description": "",
+            "fileSize": 2569,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/metadata/OpenAiRateLimit.java",
+            "user": "spring-ai-openai"
+        },
+        {
+            "description": "",
+            "fileSize": 1471,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/metadata/OpenAiImageGenerationMetadata.java",
+            "user": "spring-ai-openai"
+        },
+        {
+            "description": "",
+            "fileSize": 2539,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/metadata/OpenAiChatResponseMetadata.java",
+            "user": "spring-ai-openai"
+        },
+        {
+            "description": "",
+            "fileSize": 1774,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/metadata/OpenAiUsage.java",
+            "user": "spring-ai-openai"
+        },
+        {
+            "description": "",
+            "fileSize": 1202,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/metadata/audio/OpenAiAudioTranscriptionMetadata.java",
+            "user": "spring-ai-openai"
+        },
+        {
+            "description": "",
+            "fileSize": 2565,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/metadata/audio/OpenAiAudioSpeechResponseMetadata.java",
+            "user": "spring-ai-openai"
+        },
+        {
+            "description": "",
+            "fileSize": 2787,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/metadata/audio/OpenAiAudioTranscriptionResponseMetadata.java",
+            "user": "spring-ai-openai"
+        },
+        {
+            "description": "",
+            "fileSize": 1106,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/metadata/audio/OpenAiAudioSpeechMetadata.java",
+            "user": "spring-ai-openai"
+        },
+        {
+            "description": "",
+            "fileSize": 6354,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/metadata/support/OpenAiResponseHeaderExtractor.java",
+            "user": "spring-ai-openai"
+        },
+        {
+            "description": "",
+            "fileSize": 1822,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/metadata/support/OpenAiApiResponseHeaders.java",
+            "user": "spring-ai-openai"
+        },
+        {
+            "description": "",
+            "fileSize": 1918,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-openai/src/main/java/org/springframework/ai/openai/aot/OpenAiRuntimeHints.java",
+            "user": "spring-ai-openai"
+        }
+    ]
+}

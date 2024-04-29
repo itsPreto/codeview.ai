@@ -1,0 +1,100 @@
+{
+    "links": [
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/vector-stores/spring-ai-chroma/src/test/java/org/springframework/ai/vectorstore/ChromaVectorStoreIT.java",
+            "target": "/Users/z98459/Desktop/spring-ai/vector-stores/spring-ai-chroma/src/test/java/org/springframework/ai/chroma/ChromaApiIT.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/vector-stores/spring-ai-chroma/src/test/java/org/springframework/ai/vectorstore/BasicAuthChromaWhereIT.java",
+            "target": "/Users/z98459/Desktop/spring-ai/vector-stores/spring-ai-chroma/src/test/java/org/springframework/ai/chroma/ChromaApiIT.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/vector-stores/spring-ai-chroma/src/test/java/org/springframework/ai/vectorstore/TokenSecuredChromaWhereIT.java",
+            "target": "/Users/z98459/Desktop/spring-ai/vector-stores/spring-ai-chroma/src/test/java/org/springframework/ai/chroma/ChromaApiIT.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/vector-stores/spring-ai-chroma/src/main/java/org/springframework/ai/chroma/ChromaApi.java",
+            "target": "/Users/z98459/Desktop/spring-ai/vector-stores/spring-ai-chroma/src/test/java/org/springframework/ai/chroma/ChromaApiIT.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/vector-stores/spring-ai-chroma/src/main/java/org/springframework/ai/vectorstore/ChromaVectorStore.java",
+            "target": "/Users/z98459/Desktop/spring-ai/vector-stores/spring-ai-chroma/src/test/java/org/springframework/ai/chroma/ChromaApiIT.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/vector-stores/spring-ai-chroma/src/test/java/org/springframework/ai/chroma/ChromaApiIT.java",
+            "target": "/Users/z98459/Desktop/spring-ai/vector-stores/spring-ai-chroma/src/main/java/org/springframework/ai/chroma/ChromaApi.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/vector-stores/spring-ai-chroma/src/test/java/org/springframework/ai/vectorstore/ChromaVectorStoreIT.java",
+            "target": "/Users/z98459/Desktop/spring-ai/vector-stores/spring-ai-chroma/src/main/java/org/springframework/ai/chroma/ChromaApi.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/vector-stores/spring-ai-chroma/src/test/java/org/springframework/ai/vectorstore/BasicAuthChromaWhereIT.java",
+            "target": "/Users/z98459/Desktop/spring-ai/vector-stores/spring-ai-chroma/src/main/java/org/springframework/ai/chroma/ChromaApi.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/vector-stores/spring-ai-chroma/src/test/java/org/springframework/ai/vectorstore/TokenSecuredChromaWhereIT.java",
+            "target": "/Users/z98459/Desktop/spring-ai/vector-stores/spring-ai-chroma/src/main/java/org/springframework/ai/chroma/ChromaApi.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/vector-stores/spring-ai-chroma/src/main/java/org/springframework/ai/vectorstore/ChromaVectorStore.java",
+            "target": "/Users/z98459/Desktop/spring-ai/vector-stores/spring-ai-chroma/src/main/java/org/springframework/ai/chroma/ChromaApi.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/vector-stores/spring-ai-chroma/src/test/java/org/springframework/ai/vectorstore/ChromaVectorStoreIT.java",
+            "target": "/Users/z98459/Desktop/spring-ai/vector-stores/spring-ai-chroma/src/main/java/org/springframework/ai/vectorstore/ChromaVectorStore.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/vector-stores/spring-ai-chroma/src/test/java/org/springframework/ai/vectorstore/BasicAuthChromaWhereIT.java",
+            "target": "/Users/z98459/Desktop/spring-ai/vector-stores/spring-ai-chroma/src/main/java/org/springframework/ai/vectorstore/ChromaVectorStore.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/vector-stores/spring-ai-chroma/src/test/java/org/springframework/ai/vectorstore/TokenSecuredChromaWhereIT.java",
+            "target": "/Users/z98459/Desktop/spring-ai/vector-stores/spring-ai-chroma/src/main/java/org/springframework/ai/vectorstore/ChromaVectorStore.java"
+        }
+    ],
+    "nodes": [
+        {
+            "description": "",
+            "fileSize": 6941,
+            "id": "/Users/z98459/Desktop/spring-ai/vector-stores/spring-ai-chroma/src/test/java/org/springframework/ai/chroma/ChromaApiIT.java",
+            "user": "spring-ai-chroma"
+        },
+        {
+            "description": "",
+            "fileSize": 8355,
+            "id": "/Users/z98459/Desktop/spring-ai/vector-stores/spring-ai-chroma/src/test/java/org/springframework/ai/vectorstore/ChromaVectorStoreIT.java",
+            "user": "spring-ai-chroma"
+        },
+        {
+            "description": "",
+            "fileSize": 4332,
+            "id": "/Users/z98459/Desktop/spring-ai/vector-stores/spring-ai-chroma/src/test/java/org/springframework/ai/vectorstore/BasicAuthChromaWhereIT.java",
+            "user": "spring-ai-chroma"
+        },
+        {
+            "description": "",
+            "fileSize": 5605,
+            "id": "/Users/z98459/Desktop/spring-ai/vector-stores/spring-ai-chroma/src/test/java/org/springframework/ai/vectorstore/TokenSecuredChromaWhereIT.java",
+            "user": "spring-ai-chroma"
+        },
+        {
+            "description": "",
+            "fileSize": 13250,
+            "id": "/Users/z98459/Desktop/spring-ai/vector-stores/spring-ai-chroma/src/main/java/org/springframework/ai/chroma/ChromaApi.java",
+            "user": "spring-ai-chroma"
+        },
+        {
+            "description": "",
+            "fileSize": 2508,
+            "id": "/Users/z98459/Desktop/spring-ai/vector-stores/spring-ai-chroma/src/main/java/org/springframework/ai/vectorstore/JsonUtils.java",
+            "user": "spring-ai-chroma"
+        },
+        {
+            "description": "",
+            "fileSize": 6104,
+            "id": "/Users/z98459/Desktop/spring-ai/vector-stores/spring-ai-chroma/src/main/java/org/springframework/ai/vectorstore/ChromaVectorStore.java",
+            "user": "spring-ai-chroma"
+        }
+    ]
+}

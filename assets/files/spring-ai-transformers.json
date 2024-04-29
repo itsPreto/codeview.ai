@@ -1,0 +1,35 @@
+{
+    "links": [],
+    "nodes": [
+        {
+            "description": "",
+            "fileSize": 4433,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-transformers/src/test/java/org/springframework/ai/transformers/ResourceCacheServiceTests.java",
+            "user": "spring-ai-transformers"
+        },
+        {
+            "description": "",
+            "fileSize": 4009,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-transformers/src/test/java/org/springframework/ai/transformers/TransformersEmbeddingClientTests.java",
+            "user": "spring-ai-transformers"
+        },
+        {
+            "description": "",
+            "fileSize": 4776,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-transformers/src/test/java/org/springframework/ai/transformers/samples/ONNXSample.java",
+            "user": "spring-ai-transformers"
+        },
+        {
+            "description": "",
+            "fileSize": 5574,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-transformers/src/main/java/org/springframework/ai/transformers/ResourceCacheService.java",
+            "user": "spring-ai-transformers"
+        },
+        {
+            "description": "",
+            "fileSize": 12350,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-transformers/src/main/java/org/springframework/ai/transformers/TransformersEmbeddingClient.java",
+            "user": "spring-ai-transformers"
+        }
+    ]
+}

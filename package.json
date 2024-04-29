@@ -1,0 +1,19 @@
+{
+  "name": "codeview-ai",
+  "version": "1.0.0",
+  "description": "Visualize your codebase like starts in the sky. Ask technical questions about the code and mode.",
+  "main": "src/app/app.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@xterm/xterm": "^5.5.0",
+    "electron": "^29.1.5",
+    "three": "^0.157.0",
+    "three-css2drender": "^1.0.0",
+    "typescript": "^5.4.5"
+  }
+}

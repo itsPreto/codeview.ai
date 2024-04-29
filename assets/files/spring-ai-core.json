@@ -1,0 +1,1334 @@
+{
+    "links": [
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/test/java/org/springframework/ai/chat/ChatBuilderTests.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/test/java/org/springframework/ai/model/ModelOptionsUtilsTests.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/test/java/org/springframework/ai/model/function/TypeResolverHelperTests.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/test/java/org/springframework/ai/model/ModelOptionsUtilsTests.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/test/java/org/springframework/ai/aot/SpringAiCoreRuntimeHintsTest.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/test/java/org/springframework/ai/model/ModelOptionsUtilsTests.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/chat/ChatClient.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/test/java/org/springframework/ai/model/ModelOptionsUtilsTests.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/chat/Generation.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/test/java/org/springframework/ai/model/ModelOptionsUtilsTests.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/chat/ChatResponse.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/test/java/org/springframework/ai/model/ModelOptionsUtilsTests.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/chat/StreamingChatClient.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/test/java/org/springframework/ai/model/ModelOptionsUtilsTests.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/chat/prompt/ChatOptions.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/test/java/org/springframework/ai/model/ModelOptionsUtilsTests.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/chat/prompt/Prompt.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/test/java/org/springframework/ai/model/ModelOptionsUtilsTests.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/chat/metadata/ChatGenerationMetadata.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/test/java/org/springframework/ai/model/ModelOptionsUtilsTests.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/chat/metadata/ChatResponseMetadata.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/test/java/org/springframework/ai/model/ModelOptionsUtilsTests.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/embedding/EmbeddingResponse.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/test/java/org/springframework/ai/model/ModelOptionsUtilsTests.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/embedding/EmbeddingResultMetadata.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/test/java/org/springframework/ai/model/ModelOptionsUtilsTests.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/embedding/EmbeddingResponseMetadata.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/test/java/org/springframework/ai/model/ModelOptionsUtilsTests.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/embedding/EmbeddingClient.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/test/java/org/springframework/ai/model/ModelOptionsUtilsTests.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/embedding/Embedding.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/test/java/org/springframework/ai/model/ModelOptionsUtilsTests.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/embedding/EmbeddingOptions.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/test/java/org/springframework/ai/model/ModelOptionsUtilsTests.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/embedding/EmbeddingRequest.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/test/java/org/springframework/ai/model/ModelOptionsUtilsTests.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/image/ImagePrompt.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/test/java/org/springframework/ai/model/ModelOptionsUtilsTests.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/image/ImageResponse.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/test/java/org/springframework/ai/model/ModelOptionsUtilsTests.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/image/ImageOptions.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/test/java/org/springframework/ai/model/ModelOptionsUtilsTests.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/image/ImageResponseMetadata.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/test/java/org/springframework/ai/model/ModelOptionsUtilsTests.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/image/ImageClient.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/test/java/org/springframework/ai/model/ModelOptionsUtilsTests.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/image/ImageGeneration.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/test/java/org/springframework/ai/model/ModelOptionsUtilsTests.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/image/ImageGenerationMetadata.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/test/java/org/springframework/ai/model/ModelOptionsUtilsTests.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/model/function/FunctionCallbackContext.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/test/java/org/springframework/ai/model/ModelOptionsUtilsTests.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/model/function/FunctionCallbackWrapper.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/test/java/org/springframework/ai/model/ModelOptionsUtilsTests.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/aot/SpringAiCoreRuntimeHints.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/test/java/org/springframework/ai/model/ModelOptionsUtilsTests.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/test/java/org/springframework/ai/reader/JsonReaderTests.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/reader/JsonReader.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/test/java/org/springframework/ai/chat/ChatClientTests.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/chat/messages/AssistantMessage.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/chat/Generation.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/chat/messages/AssistantMessage.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/chat/prompt/AssistantPromptTemplate.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/chat/messages/AssistantMessage.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/chat/prompt/SystemPromptTemplate.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/chat/messages/SystemMessage.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/chat/prompt/PromptTemplate.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/chat/messages/Media.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/chat/prompt/PromptTemplateMessageActions.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/chat/messages/Media.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/chat/ChatClient.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/chat/messages/UserMessage.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/chat/prompt/PromptTemplate.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/chat/messages/UserMessage.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/chat/prompt/Prompt.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/chat/messages/UserMessage.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/test/java/org/springframework/ai/prompt/PromptTests.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/chat/prompt/SystemPromptTemplate.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/test/java/org/springframework/ai/chat/ChatBuilderTests.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/chat/prompt/ChatOptionsBuilder.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/test/java/org/springframework/ai/prompt/PromptTests.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/chat/prompt/PromptTemplate.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/test/java/org/springframework/ai/prompt/PromptTemplateTest.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/chat/prompt/PromptTemplate.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/transformer/SummaryMetadataEnricher.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/chat/prompt/PromptTemplate.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/transformer/KeywordMetadataEnricher.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/chat/prompt/PromptTemplate.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/test/java/org/springframework/ai/chat/ChatClientTests.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/chat/prompt/Prompt.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/test/java/org/springframework/ai/chat/ChatBuilderTests.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/chat/prompt/Prompt.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/test/java/org/springframework/ai/prompt/PromptTests.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/chat/prompt/Prompt.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/test/java/org/springframework/ai/prompt/PromptTemplateTest.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/chat/prompt/Prompt.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/chat/ChatClient.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/chat/prompt/Prompt.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/chat/StreamingChatClient.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/chat/prompt/Prompt.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/transformer/SummaryMetadataEnricher.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/chat/prompt/Prompt.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/transformer/KeywordMetadataEnricher.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/chat/prompt/Prompt.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/test/java/org/springframework/ai/reader/TextReaderTests.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/transformer/splitter/TokenTextSplitter.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/vectorstore/SimpleVectorStore.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/embedding/Embedding.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/test/java/org/springframework/ai/reader/JsonReaderTests.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/document/Document.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/test/java/org/springframework/ai/reader/TextReaderTests.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/document/Document.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/test/java/org/springframework/ai/transformer/splitter/TextSplitterTests.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/document/Document.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/test/java/org/springframework/ai/embedding/AbstractEmbeddingClientTests.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/document/Document.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/reader/JsonReader.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/document/Document.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/reader/TextReader.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/document/Document.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/transformer/SummaryMetadataEnricher.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/document/Document.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/transformer/ContentFormatTransformer.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/document/Document.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/transformer/KeywordMetadataEnricher.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/document/Document.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/transformer/splitter/TextSplitter.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/document/Document.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/embedding/EmbeddingClient.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/document/Document.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/writer/FileDocumentWriter.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/document/Document.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/vectorstore/VectorStore.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/document/Document.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/vectorstore/SimpleVectorStore.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/document/Document.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/vectorstore/SearchRequest.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/document/Document.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/test/java/org/springframework/ai/transformer/splitter/TextSplitterTests.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/document/DefaultContentFormatter.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/transformer/ContentFormatTransformer.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/document/DefaultContentFormatter.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/document/Document.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/document/id/RandomIdGenerator.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/test/java/org/springframework/ai/prompt/parsers/ListOutputParserTest.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/parser/ListOutputParser.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/model/function/FunctionCallbackWrapper.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/model/ModelOptionsUtils.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/test/java/org/springframework/ai/model/function/TypeResolverHelperTests.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/model/function/TypeResolverHelper.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/aot/SpringAiCoreRuntimeHints.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/model/function/FunctionCallbackContext.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/test/java/org/springframework/ai/chat/ChatBuilderTests.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/model/function/FunctionCallbackWrapper.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/model/function/FunctionCallbackContext.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/model/function/FunctionCallbackWrapper.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/aot/SpringAiCoreRuntimeHints.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/model/function/FunctionCallbackWrapper.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/test/java/org/springframework/ai/vectorstore/filter/SearchRequestTests.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/vectorstore/SearchRequest.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/vectorstore/SearchRequest.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/vectorstore/filter/FilterExpressionBuilder.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/vectorstore/filter/converter/AbstractFilterExpressionConverter.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/vectorstore/filter/FilterHelper.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/test/java/org/springframework/ai/vectorstore/filter/SearchRequestTests.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/vectorstore/filter/FilterExpressionTextParser.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/vectorstore/SearchRequest.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/vectorstore/filter/FilterExpressionTextParser.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/test/java/org/springframework/ai/vectorstore/filter/FilterHelperTests.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/vectorstore/filter/Filter.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/test/java/org/springframework/ai/vectorstore/filter/FilterExpressionBuilderTests.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/vectorstore/filter/Filter.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/test/java/org/springframework/ai/vectorstore/filter/FilterExpressionTextParserTests.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/vectorstore/filter/Filter.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/test/java/org/springframework/ai/vectorstore/filter/SearchRequestTests.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/vectorstore/filter/Filter.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/test/java/org/springframework/ai/vectorstore/filter/converter/PgVectorFilterExpressionConverterTests.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/vectorstore/filter/Filter.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/test/java/org/springframework/ai/vectorstore/filter/converter/PineconeFilterExpressionConverterTests.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/vectorstore/filter/Filter.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/test/java/org/springframework/ai/vectorstore/filter/converter/MilvusFilterExpressionConverterTests.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/vectorstore/filter/Filter.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/vectorstore/SearchRequest.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/vectorstore/filter/Filter.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/vectorstore/filter/FilterExpressionBuilder.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/vectorstore/filter/Filter.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/vectorstore/filter/FilterHelper.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/vectorstore/filter/Filter.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/vectorstore/filter/converter/PineconeFilterExpressionConverter.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/vectorstore/filter/Filter.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/vectorstore/filter/converter/MilvusFilterExpressionConverter.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/vectorstore/filter/Filter.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/vectorstore/filter/converter/AbstractFilterExpressionConverter.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/vectorstore/filter/Filter.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/vectorstore/filter/converter/PgVectorFilterExpressionConverter.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/vectorstore/filter/Filter.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/vectorstore/filter/converter/PrintFilterExpressionConverter.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/vectorstore/filter/Filter.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/vectorstore/filter/converter/ChromaFilterExpressionConverter.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/vectorstore/filter/Filter.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/test/java/org/springframework/ai/vectorstore/filter/FilterHelperTests.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/vectorstore/filter/converter/PrintFilterExpressionConverter.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/vectorstore/filter/FilterExpressionTextParser.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/vectorstore/filter/antlr4/FiltersLexer.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/vectorstore/filter/FilterExpressionTextParser.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/vectorstore/filter/antlr4/FiltersBaseVisitor.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/vectorstore/filter/FilterExpressionTextParser.java",
+            "target": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/vectorstore/filter/antlr4/FiltersParser.java"
+        }
+    ],
+    "nodes": [
+        {
+            "description": "",
+            "fileSize": 771,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/test/java/org/springframework/ai/TestConfiguration.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 1465,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/test/java/org/springframework/ai/reader/JsonReaderTests.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 1879,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/test/java/org/springframework/ai/reader/TextReaderTests.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 2825,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/test/java/org/springframework/ai/chat/ChatClientTests.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 3096,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/test/java/org/springframework/ai/chat/ChatBuilderTests.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 4180,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/test/java/org/springframework/ai/transformer/splitter/TextSplitterTests.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 3074,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/test/java/org/springframework/ai/embedding/AbstractEmbeddingClientTests.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 3352,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/test/java/org/springframework/ai/document/ContentFormatterTests.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 2298,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/test/java/org/springframework/ai/document/id/IdGeneratorProviderTest.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 2345,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/test/java/org/springframework/ai/document/id/JdkSha256HexIdGeneratorTest.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 4929,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/test/java/org/springframework/ai/parser/BeanOutputParserTest.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 1163,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/test/java/org/springframework/ai/prompt/ChatTests.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 4933,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/test/java/org/springframework/ai/prompt/PromptTests.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 3803,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/test/java/org/springframework/ai/prompt/PromptTemplateTest.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 1238,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/test/java/org/springframework/ai/prompt/parsers/ListOutputParserTest.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 6540,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/test/java/org/springframework/ai/model/ModelOptionsUtilsTests.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 3080,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/test/java/org/springframework/ai/model/function/TypeResolverHelperTests.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 2438,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/test/java/org/springframework/ai/metadata/UsageTests.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 3828,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/test/java/org/springframework/ai/metadata/PromptMetadataTests.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 1660,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/test/java/org/springframework/ai/aot/SpringAiCoreRuntimeHintsTest.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 1189,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/test/java/org/springframework/ai/aot/KnuddelsRuntimeHintsTest.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 1638,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/test/java/org/springframework/ai/aot/AiRuntimeHintsTests.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 6393,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/test/java/org/springframework/ai/vectorstore/filter/FilterHelperTests.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 4627,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/test/java/org/springframework/ai/vectorstore/filter/FilterExpressionBuilderTests.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 7927,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/test/java/org/springframework/ai/vectorstore/filter/FilterExpressionTextParserTests.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 5296,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/test/java/org/springframework/ai/vectorstore/filter/SearchRequestTests.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 5017,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/test/java/org/springframework/ai/vectorstore/filter/converter/PgVectorFilterExpressionConverterTests.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 5518,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/test/java/org/springframework/ai/vectorstore/filter/converter/PineconeFilterExpressionConverterTests.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 5462,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/test/java/org/springframework/ai/vectorstore/filter/converter/MilvusFilterExpressionConverterTests.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 1100,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/ResourceUtils.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 965,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/reader/JsonMetadataGenerator.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 3067,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/reader/JsonReader.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 2765,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/reader/TextReader.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 972,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/reader/EmptyJsonMetadataGenerator.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 9967,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/reader/ExtractedTextFormatter.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 1491,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/chat/ChatClient.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 2438,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/chat/Generation.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 3284,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/chat/ChatResponse.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 1726,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/chat/StreamingChatClient.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 1376,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/chat/package-info.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 1088,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/chat/messages/Message.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 1472,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/chat/messages/AssistantMessage.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 4612,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/chat/messages/AbstractMessage.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 1483,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/chat/messages/SystemMessage.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 1382,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/chat/messages/Media.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 1596,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/chat/messages/UserMessage.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 1343,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/chat/messages/MessageType.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 1253,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/chat/messages/FunctionMessage.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 824,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/chat/prompt/FunctionPromptTemplate.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 1467,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/chat/prompt/SystemPromptTemplate.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 1801,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/chat/prompt/ChatOptionsBuilder.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 932,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/chat/prompt/ChatOptions.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 2413,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/chat/prompt/ChatPromptTemplate.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 6386,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/chat/prompt/PromptTemplate.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 905,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/chat/prompt/PromptTemplateChatActions.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 993,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/chat/prompt/PromptTemplateMessageActions.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 830,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/chat/prompt/PromptTemplateActions.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 1136,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/chat/prompt/TemplateFormat.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 800,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/chat/prompt/PromptTemplateStringActions.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 2528,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/chat/prompt/Prompt.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 1491,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/chat/prompt/AssistantPromptTemplate.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 4533,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/chat/metadata/PromptMetadata.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 2456,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/chat/metadata/ChatGenerationMetadata.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 2905,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/chat/metadata/RateLimit.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 960,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/chat/metadata/EmptyUsage.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 2069,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/chat/metadata/Usage.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 1491,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/chat/metadata/ChatResponseMetadata.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 1273,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/chat/metadata/EmptyRateLimit.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 4184,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/transformer/SummaryMetadataEnricher.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 3181,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/transformer/ContentFormatTransformer.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 2440,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/transformer/KeywordMetadataEnricher.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 4407,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/transformer/splitter/TokenTextSplitter.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 3295,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/transformer/splitter/TextSplitter.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 2530,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/embedding/EmbeddingResponse.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 819,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/embedding/EmbeddingResultMetadata.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 1287,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/embedding/EmbeddingResponseMetadata.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 2441,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/embedding/EmbeddingClient.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 2981,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/embedding/AbstractEmbeddingClient.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 2207,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/embedding/Embedding.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 957,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/embedding/EmbeddingOptions.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 1209,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/embedding/EmbeddingRequest.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 721,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/document/MetadataMode.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 889,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/document/ContentFormatter.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 791,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/document/DocumentReader.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 827,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/document/DocumentWriter.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 5302,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/document/Document.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 8586,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/document/DefaultContentFormatter.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 812,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/document/DocumentTransformer.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 1060,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/document/DocumentRetriever.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 1113,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/document/id/IdGenerator.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 3025,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/document/id/JdkSha256HexIdGenerator.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 964,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/document/id/RandomIdGenerator.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 736,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/parser/Parser.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 1352,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/parser/AbstractMessageConverterOutputParser.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 1405,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/parser/AbstractConversionServiceOutputParser.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 1969,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/parser/MapOutputParser.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 6000,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/parser/BeanOutputParser.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 1453,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/parser/ListOutputParser.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 1012,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/parser/FormatProvider.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 1032,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/parser/OutputParser.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 2241,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/image/ImagePrompt.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 2103,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/image/ImageResponse.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 1590,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/image/Image.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 1438,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/image/ImageMessage.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 2372,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/image/ImageOptionsBuilder.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 1045,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/image/ImageOptions.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 914,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/image/ImageResponseMetadata.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 854,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/image/ImageClient.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 1401,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/image/ImageGeneration.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 780,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/image/ImageGenerationMetadata.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 3022,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/writer/FileDocumentWriter.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 1140,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/model/ResponseMetadata.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 1126,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/model/ResultMetadata.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 14625,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/model/ModelOptionsUtils.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 1405,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/model/ModelResult.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 1141,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/model/ModelOptions.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 1545,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/model/ModelRequest.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 1532,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/model/ModelClient.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 1618,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/model/StreamingModelClient.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 1247,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/model/package-info.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 1642,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/model/ModelResponse.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 1748,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/model/function/FunctionCallback.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 3056,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/model/function/TypeResolverHelper.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 3777,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/model/function/FunctionCallingOptionsBuilder.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 5174,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/model/function/AbstractFunctionCallback.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 4857,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/model/function/FunctionCallbackContext.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 5292,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/model/function/AbstractFunctionCallSupport.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 2262,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/model/function/FunctionCallingOptions.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 5286,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/model/function/FunctionCallbackWrapper.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 4456,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/aot/AiRuntimeHints.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 2552,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/aot/SpringAiCoreRuntimeHints.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 1087,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/aot/KnuddelsRuntimeHints.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 2738,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/vectorstore/VectorStore.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 7458,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/vectorstore/SimpleVectorStore.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 8933,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/vectorstore/SearchRequest.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 4211,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/vectorstore/filter/FilterExpressionBuilder.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 7690,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/vectorstore/filter/FilterHelper.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 988,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/vectorstore/filter/FilterExpressionConverter.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 10860,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/vectorstore/filter/FilterExpressionTextParser.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 4756,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/vectorstore/filter/Filter.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 2094,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/vectorstore/filter/converter/PineconeFilterExpressionConverter.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 2310,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/vectorstore/filter/converter/MilvusFilterExpressionConverter.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 4574,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/vectorstore/filter/converter/AbstractFilterExpressionConverter.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 2201,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/vectorstore/filter/converter/PgVectorFilterExpressionConverter.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 1578,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/vectorstore/filter/converter/PrintFilterExpressionConverter.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 1019,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/vectorstore/filter/converter/ChromaFilterExpressionConverter.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 8287,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/vectorstore/filter/antlr4/FiltersListener.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 17445,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/vectorstore/filter/antlr4/FiltersLexer.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 6099,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/vectorstore/filter/antlr4/FiltersBaseVisitor.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 37865,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/vectorstore/filter/antlr4/FiltersParser.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 5608,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/vectorstore/filter/antlr4/FiltersVisitor.java",
+            "user": "spring-ai-core"
+        },
+        {
+            "description": "",
+            "fileSize": 8101,
+            "id": "/Users/z98459/Desktop/spring-ai/spring-ai-core/src/main/java/org/springframework/ai/vectorstore/filter/antlr4/FiltersBaseListener.java",
+            "user": "spring-ai-core"
+        }
+    ]
+}

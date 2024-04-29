@@ -1,0 +1,122 @@
+{
+    "links": [
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-watsonx-ai/src/test/java/org/springframework/ai/watsonx/api/WatsonxAiChatOptionTest.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-watsonx-ai/src/main/java/org/springframework/ai/watsonx/WatsonxAiChatOptions.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-watsonx-ai/src/test/java/org/springframework/ai/watsonx/aot/WatsonxAiRuntimeHintsTest.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-watsonx-ai/src/main/java/org/springframework/ai/watsonx/WatsonxAiChatOptions.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-watsonx-ai/src/main/java/org/springframework/ai/watsonx/api/WatsonxAiRequest.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-watsonx-ai/src/main/java/org/springframework/ai/watsonx/WatsonxAiChatOptions.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-watsonx-ai/src/main/java/org/springframework/ai/watsonx/aot/WatsonxAiRuntimeHints.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-watsonx-ai/src/main/java/org/springframework/ai/watsonx/WatsonxAiChatOptions.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-watsonx-ai/src/main/java/org/springframework/ai/watsonx/WatsonxAiChatClient.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-watsonx-ai/src/main/java/org/springframework/ai/watsonx/utils/MessageToPromptConverter.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-watsonx-ai/src/test/java/org/springframework/ai/watsonx/WatsonxAiChatClientTest.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-watsonx-ai/src/main/java/org/springframework/ai/watsonx/api/WatsonxAiApi.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-watsonx-ai/src/test/java/org/springframework/ai/watsonx/aot/WatsonxAiRuntimeHintsTest.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-watsonx-ai/src/main/java/org/springframework/ai/watsonx/api/WatsonxAiApi.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-watsonx-ai/src/main/java/org/springframework/ai/watsonx/WatsonxAiChatClient.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-watsonx-ai/src/main/java/org/springframework/ai/watsonx/api/WatsonxAiApi.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-watsonx-ai/src/main/java/org/springframework/ai/watsonx/aot/WatsonxAiRuntimeHints.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-watsonx-ai/src/main/java/org/springframework/ai/watsonx/api/WatsonxAiApi.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-watsonx-ai/src/test/java/org/springframework/ai/watsonx/WatsonxAiChatClientTest.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-watsonx-ai/src/main/java/org/springframework/ai/watsonx/api/WatsonxAiRequest.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-watsonx-ai/src/main/java/org/springframework/ai/watsonx/WatsonxAiChatClient.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-watsonx-ai/src/main/java/org/springframework/ai/watsonx/api/WatsonxAiRequest.java"
+        }
+    ],
+    "nodes": [
+        {
+            "description": "",
+            "fileSize": 9558,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-watsonx-ai/src/test/java/org/springframework/ai/watsonx/WatsonxAiChatClientTest.java",
+            "user": "spring-ai-watsonx-ai"
+        },
+        {
+            "description": "",
+            "fileSize": 3517,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-watsonx-ai/src/test/java/org/springframework/ai/watsonx/utils/MessageToPromptConverterTest.java",
+            "user": "spring-ai-watsonx-ai"
+        },
+        {
+            "description": "",
+            "fileSize": 4670,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-watsonx-ai/src/test/java/org/springframework/ai/watsonx/api/WatsonxAiChatOptionTest.java",
+            "user": "spring-ai-watsonx-ai"
+        },
+        {
+            "description": "",
+            "fileSize": 2030,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-watsonx-ai/src/test/java/org/springframework/ai/watsonx/aot/WatsonxAiRuntimeHintsTest.java",
+            "user": "spring-ai-watsonx-ai"
+        },
+        {
+            "description": "",
+            "fileSize": 5170,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-watsonx-ai/src/main/java/org/springframework/ai/watsonx/WatsonxAiChatClient.java",
+            "user": "spring-ai-watsonx-ai"
+        },
+        {
+            "description": "",
+            "fileSize": 10428,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-watsonx-ai/src/main/java/org/springframework/ai/watsonx/WatsonxAiChatOptions.java",
+            "user": "spring-ai-watsonx-ai"
+        },
+        {
+            "description": "",
+            "fileSize": 3030,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-watsonx-ai/src/main/java/org/springframework/ai/watsonx/utils/MessageToPromptConverter.java",
+            "user": "spring-ai-watsonx-ai"
+        },
+        {
+            "description": "",
+            "fileSize": 4571,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-watsonx-ai/src/main/java/org/springframework/ai/watsonx/api/WatsonxAiApi.java",
+            "user": "spring-ai-watsonx-ai"
+        },
+        {
+            "description": "",
+            "fileSize": 1132,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-watsonx-ai/src/main/java/org/springframework/ai/watsonx/api/WatsonxAiResults.java",
+            "user": "spring-ai-watsonx-ai"
+        },
+        {
+            "description": "",
+            "fileSize": 2802,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-watsonx-ai/src/main/java/org/springframework/ai/watsonx/api/WatsonxAiRequest.java",
+            "user": "spring-ai-watsonx-ai"
+        },
+        {
+            "description": "",
+            "fileSize": 1166,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-watsonx-ai/src/main/java/org/springframework/ai/watsonx/api/WatsonxAiResponse.java",
+            "user": "spring-ai-watsonx-ai"
+        },
+        {
+            "description": "",
+            "fileSize": 1685,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-watsonx-ai/src/main/java/org/springframework/ai/watsonx/aot/WatsonxAiRuntimeHints.java",
+            "user": "spring-ai-watsonx-ai"
+        }
+    ]
+}

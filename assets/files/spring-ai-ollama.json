@@ -1,0 +1,190 @@
+{
+    "links": [
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-ollama/src/test/java/org/springframework/ai/ollama/OllamaEmbeddingClientIT.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-ollama/src/test/java/org/springframework/ai/ollama/api/OllamaApiIT.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-ollama/src/test/java/org/springframework/ai/ollama/OllamaChatClientIT.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-ollama/src/main/java/org/springframework/ai/ollama/api/OllamaOptions.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-ollama/src/test/java/org/springframework/ai/ollama/OllamaChatClientMultimodalIT.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-ollama/src/main/java/org/springframework/ai/ollama/api/OllamaOptions.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-ollama/src/test/java/org/springframework/ai/ollama/OllamaEmbeddingRequestTests.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-ollama/src/main/java/org/springframework/ai/ollama/api/OllamaOptions.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-ollama/src/test/java/org/springframework/ai/ollama/OllamaChatRequestTests.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-ollama/src/main/java/org/springframework/ai/ollama/api/OllamaOptions.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-ollama/src/test/java/org/springframework/ai/ollama/aot/OllamaRuntimeHintsTests.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-ollama/src/main/java/org/springframework/ai/ollama/api/OllamaOptions.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-ollama/src/main/java/org/springframework/ai/ollama/OllamaEmbeddingClient.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-ollama/src/main/java/org/springframework/ai/ollama/api/OllamaOptions.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-ollama/src/main/java/org/springframework/ai/ollama/OllamaChatClient.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-ollama/src/main/java/org/springframework/ai/ollama/api/OllamaOptions.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-ollama/src/main/java/org/springframework/ai/ollama/aot/OllamaRuntimeHints.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-ollama/src/main/java/org/springframework/ai/ollama/api/OllamaOptions.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-ollama/src/test/java/org/springframework/ai/ollama/OllamaChatClientIT.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-ollama/src/main/java/org/springframework/ai/ollama/api/OllamaApi.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-ollama/src/test/java/org/springframework/ai/ollama/OllamaChatClientMultimodalIT.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-ollama/src/main/java/org/springframework/ai/ollama/api/OllamaApi.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-ollama/src/test/java/org/springframework/ai/ollama/OllamaEmbeddingRequestTests.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-ollama/src/main/java/org/springframework/ai/ollama/api/OllamaApi.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-ollama/src/test/java/org/springframework/ai/ollama/OllamaChatRequestTests.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-ollama/src/main/java/org/springframework/ai/ollama/api/OllamaApi.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-ollama/src/test/java/org/springframework/ai/ollama/OllamaEmbeddingClientIT.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-ollama/src/main/java/org/springframework/ai/ollama/api/OllamaApi.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-ollama/src/test/java/org/springframework/ai/ollama/api/OllamaApiIT.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-ollama/src/main/java/org/springframework/ai/ollama/api/OllamaApi.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-ollama/src/test/java/org/springframework/ai/ollama/aot/OllamaRuntimeHintsTests.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-ollama/src/main/java/org/springframework/ai/ollama/api/OllamaApi.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-ollama/src/main/java/org/springframework/ai/ollama/OllamaEmbeddingClient.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-ollama/src/main/java/org/springframework/ai/ollama/api/OllamaApi.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-ollama/src/main/java/org/springframework/ai/ollama/OllamaChatClient.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-ollama/src/main/java/org/springframework/ai/ollama/api/OllamaApi.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-ollama/src/main/java/org/springframework/ai/ollama/metadata/OllamaChatResponseMetadata.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-ollama/src/main/java/org/springframework/ai/ollama/api/OllamaApi.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-ollama/src/main/java/org/springframework/ai/ollama/metadata/OllamaUsage.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-ollama/src/main/java/org/springframework/ai/ollama/api/OllamaApi.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-ollama/src/main/java/org/springframework/ai/ollama/aot/OllamaRuntimeHints.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-ollama/src/main/java/org/springframework/ai/ollama/api/OllamaApi.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/models/spring-ai-ollama/src/main/java/org/springframework/ai/ollama/OllamaChatClient.java",
+            "target": "/Users/z98459/Desktop/spring-ai/models/spring-ai-ollama/src/main/java/org/springframework/ai/ollama/metadata/OllamaChatResponseMetadata.java"
+        }
+    ],
+    "nodes": [
+        {
+            "description": "",
+            "fileSize": 8145,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-ollama/src/test/java/org/springframework/ai/ollama/OllamaChatClientIT.java",
+            "user": "spring-ai-ollama"
+        },
+        {
+            "description": "",
+            "fileSize": 3464,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-ollama/src/test/java/org/springframework/ai/ollama/OllamaChatClientMultimodalIT.java",
+            "user": "spring-ai-ollama"
+        },
+        {
+            "description": "",
+            "fileSize": 2204,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-ollama/src/test/java/org/springframework/ai/ollama/OllamaEmbeddingRequestTests.java",
+            "user": "spring-ai-ollama"
+        },
+        {
+            "description": "",
+            "fileSize": 4448,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-ollama/src/test/java/org/springframework/ai/ollama/OllamaChatRequestTests.java",
+            "user": "spring-ai-ollama"
+        },
+        {
+            "description": "",
+            "fileSize": 3011,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-ollama/src/test/java/org/springframework/ai/ollama/OllamaEmbeddingClientIT.java",
+            "user": "spring-ai-ollama"
+        },
+        {
+            "description": "",
+            "fileSize": 5047,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-ollama/src/test/java/org/springframework/ai/ollama/api/OllamaApiIT.java",
+            "user": "spring-ai-ollama"
+        },
+        {
+            "description": "",
+            "fileSize": 1266,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-ollama/src/test/java/org/springframework/ai/ollama/api/OllamaModelOptionsTests.java",
+            "user": "spring-ai-ollama"
+        },
+        {
+            "description": "",
+            "fileSize": 1883,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-ollama/src/test/java/org/springframework/ai/ollama/aot/OllamaRuntimeHintsTests.java",
+            "user": "spring-ai-ollama"
+        },
+        {
+            "description": "",
+            "fileSize": 4730,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-ollama/src/main/java/org/springframework/ai/ollama/OllamaEmbeddingClient.java",
+            "user": "spring-ai-ollama"
+        },
+        {
+            "description": "",
+            "fileSize": 6881,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-ollama/src/main/java/org/springframework/ai/ollama/OllamaChatClient.java",
+            "user": "spring-ai-ollama"
+        },
+        {
+            "description": "",
+            "fileSize": 17562,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-ollama/src/main/java/org/springframework/ai/ollama/api/OllamaOptions.java",
+            "user": "spring-ai-ollama"
+        },
+        {
+            "description": "",
+            "fileSize": 1811,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-ollama/src/main/java/org/springframework/ai/ollama/api/OllamaModel.java",
+            "user": "spring-ai-ollama"
+        },
+        {
+            "description": "",
+            "fileSize": 20754,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-ollama/src/main/java/org/springframework/ai/ollama/api/OllamaApi.java",
+            "user": "spring-ai-ollama"
+        },
+        {
+            "description": "",
+            "fileSize": 1742,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-ollama/src/main/java/org/springframework/ai/ollama/metadata/OllamaChatResponseMetadata.java",
+            "user": "spring-ai-ollama"
+        },
+        {
+            "description": "",
+            "fileSize": 1837,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-ollama/src/main/java/org/springframework/ai/ollama/metadata/OllamaUsage.java",
+            "user": "spring-ai-ollama"
+        },
+        {
+            "description": "",
+            "fileSize": 1642,
+            "id": "/Users/z98459/Desktop/spring-ai/models/spring-ai-ollama/src/main/java/org/springframework/ai/ollama/aot/OllamaRuntimeHints.java",
+            "user": "spring-ai-ollama"
+        }
+    ]
+}

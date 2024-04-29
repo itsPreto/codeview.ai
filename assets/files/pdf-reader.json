@@ -1,0 +1,126 @@
+{
+    "links": [
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/document-readers/pdf-reader/src/test/java/org/springframework/ai/reader/pdf/PagePdfDocumentReaderTests.java",
+            "target": "/Users/z98459/Desktop/spring-ai/document-readers/pdf-reader/src/main/java/org/springframework/ai/reader/pdf/ParagraphPdfDocumentReader.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/document-readers/pdf-reader/src/test/java/org/springframework/ai/reader/pdf/ParagraphPdfDocumentReaderTests.java",
+            "target": "/Users/z98459/Desktop/spring-ai/document-readers/pdf-reader/src/main/java/org/springframework/ai/reader/pdf/ParagraphPdfDocumentReader.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/document-readers/pdf-reader/src/main/java/org/springframework/ai/reader/pdf/PagePdfDocumentReader.java",
+            "target": "/Users/z98459/Desktop/spring-ai/document-readers/pdf-reader/src/main/java/org/springframework/ai/reader/pdf/ParagraphPdfDocumentReader.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/document-readers/pdf-reader/src/main/java/org/springframework/ai/reader/pdf/config/PdfDocumentReaderConfig.java",
+            "target": "/Users/z98459/Desktop/spring-ai/document-readers/pdf-reader/src/main/java/org/springframework/ai/reader/pdf/ParagraphPdfDocumentReader.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/document-readers/pdf-reader/src/test/java/org/springframework/ai/reader/pdf/PagePdfDocumentReaderTests.java",
+            "target": "/Users/z98459/Desktop/spring-ai/document-readers/pdf-reader/src/main/java/org/springframework/ai/reader/pdf/PagePdfDocumentReader.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/document-readers/pdf-reader/src/test/java/org/springframework/ai/reader/pdf/ParagraphPdfDocumentReaderTests.java",
+            "target": "/Users/z98459/Desktop/spring-ai/document-readers/pdf-reader/src/main/java/org/springframework/ai/reader/pdf/PagePdfDocumentReader.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/document-readers/pdf-reader/src/main/java/org/springframework/ai/reader/pdf/ParagraphPdfDocumentReader.java",
+            "target": "/Users/z98459/Desktop/spring-ai/document-readers/pdf-reader/src/main/java/org/springframework/ai/reader/pdf/PagePdfDocumentReader.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/document-readers/pdf-reader/src/main/java/org/springframework/ai/reader/pdf/config/PdfDocumentReaderConfig.java",
+            "target": "/Users/z98459/Desktop/spring-ai/document-readers/pdf-reader/src/main/java/org/springframework/ai/reader/pdf/PagePdfDocumentReader.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/document-readers/pdf-reader/src/main/java/org/springframework/ai/reader/pdf/ParagraphPdfDocumentReader.java",
+            "target": "/Users/z98459/Desktop/spring-ai/document-readers/pdf-reader/src/main/java/org/springframework/ai/reader/pdf/config/ParagraphManager.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/document-readers/pdf-reader/src/test/java/org/springframework/ai/reader/pdf/PagePdfDocumentReaderTests.java",
+            "target": "/Users/z98459/Desktop/spring-ai/document-readers/pdf-reader/src/main/java/org/springframework/ai/reader/pdf/config/PdfDocumentReaderConfig.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/document-readers/pdf-reader/src/test/java/org/springframework/ai/reader/pdf/ParagraphPdfDocumentReaderTests.java",
+            "target": "/Users/z98459/Desktop/spring-ai/document-readers/pdf-reader/src/main/java/org/springframework/ai/reader/pdf/config/PdfDocumentReaderConfig.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/document-readers/pdf-reader/src/main/java/org/springframework/ai/reader/pdf/ParagraphPdfDocumentReader.java",
+            "target": "/Users/z98459/Desktop/spring-ai/document-readers/pdf-reader/src/main/java/org/springframework/ai/reader/pdf/config/PdfDocumentReaderConfig.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/document-readers/pdf-reader/src/main/java/org/springframework/ai/reader/pdf/PagePdfDocumentReader.java",
+            "target": "/Users/z98459/Desktop/spring-ai/document-readers/pdf-reader/src/main/java/org/springframework/ai/reader/pdf/config/PdfDocumentReaderConfig.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/document-readers/pdf-reader/src/main/java/org/springframework/ai/reader/pdf/ParagraphPdfDocumentReader.java",
+            "target": "/Users/z98459/Desktop/spring-ai/document-readers/pdf-reader/src/main/java/org/springframework/ai/reader/pdf/layout/PDFLayoutTextStripperByArea.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/document-readers/pdf-reader/src/main/java/org/springframework/ai/reader/pdf/PagePdfDocumentReader.java",
+            "target": "/Users/z98459/Desktop/spring-ai/document-readers/pdf-reader/src/main/java/org/springframework/ai/reader/pdf/layout/PDFLayoutTextStripperByArea.java"
+        }
+    ],
+    "nodes": [
+        {
+            "description": "",
+            "fileSize": 1908,
+            "id": "/Users/z98459/Desktop/spring-ai/document-readers/pdf-reader/src/test/java/org/springframework/ai/reader/pdf/PagePdfDocumentReaderTests.java",
+            "user": "pdf-reader"
+        },
+        {
+            "description": "",
+            "fileSize": 1758,
+            "id": "/Users/z98459/Desktop/spring-ai/document-readers/pdf-reader/src/test/java/org/springframework/ai/reader/pdf/ParagraphPdfDocumentReaderTests.java",
+            "user": "pdf-reader"
+        },
+        {
+            "description": "",
+            "fileSize": 2103,
+            "id": "/Users/z98459/Desktop/spring-ai/document-readers/pdf-reader/src/test/java/org/springframework/ai/reader/pdf/aot/PdfReaderRuntimeHintsTests.java",
+            "user": "pdf-reader"
+        },
+        {
+            "description": "",
+            "fileSize": 7753,
+            "id": "/Users/z98459/Desktop/spring-ai/document-readers/pdf-reader/src/main/java/org/springframework/ai/reader/pdf/ParagraphPdfDocumentReader.java",
+            "user": "pdf-reader"
+        },
+        {
+            "description": "",
+            "fileSize": 5879,
+            "id": "/Users/z98459/Desktop/spring-ai/document-readers/pdf-reader/src/main/java/org/springframework/ai/reader/pdf/PagePdfDocumentReader.java",
+            "user": "pdf-reader"
+        },
+        {
+            "description": "",
+            "fileSize": 7049,
+            "id": "/Users/z98459/Desktop/spring-ai/document-readers/pdf-reader/src/main/java/org/springframework/ai/reader/pdf/config/ParagraphManager.java",
+            "user": "pdf-reader"
+        },
+        {
+            "description": "",
+            "fileSize": 4577,
+            "id": "/Users/z98459/Desktop/spring-ai/document-readers/pdf-reader/src/main/java/org/springframework/ai/reader/pdf/config/PdfDocumentReaderConfig.java",
+            "user": "pdf-reader"
+        },
+        {
+            "description": "",
+            "fileSize": 15647,
+            "id": "/Users/z98459/Desktop/spring-ai/document-readers/pdf-reader/src/main/java/org/springframework/ai/reader/pdf/layout/ForkPDFLayoutTextStripper.java",
+            "user": "pdf-reader"
+        },
+        {
+            "description": "",
+            "fileSize": 5008,
+            "id": "/Users/z98459/Desktop/spring-ai/document-readers/pdf-reader/src/main/java/org/springframework/ai/reader/pdf/layout/PDFLayoutTextStripperByArea.java",
+            "user": "pdf-reader"
+        },
+        {
+            "description": "",
+            "fileSize": 1995,
+            "id": "/Users/z98459/Desktop/spring-ai/document-readers/pdf-reader/src/main/java/org/springframework/ai/reader/pdf/aot/PdfReaderRuntimeHints.java",
+            "user": "pdf-reader"
+        }
+    ]
+}

@@ -1,0 +1,34 @@
+{
+    "links": [
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/vector-stores/spring-ai-weaviate/src/test/java/org/springframework/ai/vectorstore/WeaviateVectorStoreIT.java",
+            "target": "/Users/z98459/Desktop/spring-ai/vector-stores/spring-ai-weaviate/src/main/java/org/springframework/ai/vectorstore/WeaviateVectorStore.java"
+        }
+    ],
+    "nodes": [
+        {
+            "description": "",
+            "fileSize": 9277,
+            "id": "/Users/z98459/Desktop/spring-ai/vector-stores/spring-ai-weaviate/src/test/java/org/springframework/ai/vectorstore/WeaviateFilterExpressionConverterTests.java",
+            "user": "spring-ai-weaviate"
+        },
+        {
+            "description": "",
+            "fileSize": 9475,
+            "id": "/Users/z98459/Desktop/spring-ai/vector-stores/spring-ai-weaviate/src/test/java/org/springframework/ai/vectorstore/WeaviateVectorStoreIT.java",
+            "user": "spring-ai-weaviate"
+        },
+        {
+            "description": "",
+            "fileSize": 6457,
+            "id": "/Users/z98459/Desktop/spring-ai/vector-stores/spring-ai-weaviate/src/main/java/org/springframework/ai/vectorstore/WeaviateFilterExpressionConverter.java",
+            "user": "spring-ai-weaviate"
+        },
+        {
+            "description": "",
+            "fileSize": 19630,
+            "id": "/Users/z98459/Desktop/spring-ai/vector-stores/spring-ai-weaviate/src/main/java/org/springframework/ai/vectorstore/WeaviateVectorStore.java",
+            "user": "spring-ai-weaviate"
+        }
+    ]
+}

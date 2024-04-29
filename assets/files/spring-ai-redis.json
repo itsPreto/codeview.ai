@@ -1,0 +1,42 @@
+{
+    "links": [
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/vector-stores/spring-ai-redis/src/test/java/org/springframework/ai/vectorstore/RedisFilterExpressionConverterTests.java",
+            "target": "/Users/z98459/Desktop/spring-ai/vector-stores/spring-ai-redis/src/main/java/org/springframework/ai/vectorstore/RedisVectorStore.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/vector-stores/spring-ai-redis/src/test/java/org/springframework/ai/vectorstore/RedisVectorStoreIT.java",
+            "target": "/Users/z98459/Desktop/spring-ai/vector-stores/spring-ai-redis/src/main/java/org/springframework/ai/vectorstore/RedisVectorStore.java"
+        },
+        {
+            "source": "/Users/z98459/Desktop/spring-ai/vector-stores/spring-ai-redis/src/main/java/org/springframework/ai/vectorstore/RedisFilterExpressionConverter.java",
+            "target": "/Users/z98459/Desktop/spring-ai/vector-stores/spring-ai-redis/src/main/java/org/springframework/ai/vectorstore/RedisVectorStore.java"
+        }
+    ],
+    "nodes": [
+        {
+            "description": "",
+            "fileSize": 5594,
+            "id": "/Users/z98459/Desktop/spring-ai/vector-stores/spring-ai-redis/src/test/java/org/springframework/ai/vectorstore/RedisFilterExpressionConverterTests.java",
+            "user": "spring-ai-redis"
+        },
+        {
+            "description": "",
+            "fileSize": 9528,
+            "id": "/Users/z98459/Desktop/spring-ai/vector-stores/spring-ai-redis/src/test/java/org/springframework/ai/vectorstore/RedisVectorStoreIT.java",
+            "user": "spring-ai-redis"
+        },
+        {
+            "description": "",
+            "fileSize": 15101,
+            "id": "/Users/z98459/Desktop/spring-ai/vector-stores/spring-ai-redis/src/main/java/org/springframework/ai/vectorstore/RedisVectorStore.java",
+            "user": "spring-ai-redis"
+        },
+        {
+            "description": "",
+            "fileSize": 6483,
+            "id": "/Users/z98459/Desktop/spring-ai/vector-stores/spring-ai-redis/src/main/java/org/springframework/ai/vectorstore/RedisFilterExpressionConverter.java",
+            "user": "spring-ai-redis"
+        }
+    ]
+}
