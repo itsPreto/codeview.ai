@@ -3,7 +3,7 @@
 import { reverseFlowAndColorize, updateChatContext, rollingContext, getLlamaRunning, allowLlamaRun } from '../../utils.js';
 // console.log("Using function from utils.js", getOrbitAllowed());
 import { chatbox, terminalOutput, userInputField, messages } from '../graph/graph.js';
-import { llama } from '../llama/llama.js' 
+import { llama } from '../llama/llama.js'
 
 export const appState = {
     isAtTopLevel: true,
@@ -198,14 +198,21 @@ function loadAndRefreshGraph(jsonFileName) {
 }
 
 export function cmdLineApi(command, output) {
+    // Trim and replace multiple spaces with a single space
+    let formattedCommand = command.trim().replace(/\s+/g, ' ');
+
+    console.log("Formatted Command:", formattedCommand);
     fetch('http://127.0.0.1:7000/execute-command', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ command: command })
+        body: JSON.stringify({ command: formattedCommand })
     })
-        .then(response => response.json())
+        .then(response => {
+            console.log("HTTP Status:", response.status); // Log the HTTP status
+            return response.json();
+        })
         .then(data => {
             console.log(data);
             updateTerminalOutput(data);
@@ -215,6 +222,7 @@ export function cmdLineApi(command, output) {
             output.textContent += '\nError: ' + error.message;
         });
 }
+
 
 export function transcribeAudioApi(formData) {
     fetch('http://127.0.0.1:8080/inference', {

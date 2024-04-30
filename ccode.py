@@ -10,43 +10,50 @@ from flask_sockets import Sockets
 import pathlib
 from tree_sitter import Parser, Language
 import pexpect
-from flask import Flask, request, jsonify, make_response
+from flask import Flask, request, jsonify, session
 from flask_cors import CORS
 import threading
 import subprocess
-from gevent import pywsgi
-from geventwebsocket.handler import WebSocketHandler
+
+logging.basicConfig(level=logging.DEBUG)
 
 app = Flask(__name__)
+app.secret_key = os.urandom(24).hex()
 # Enable CORS for all domains on all routes
 CORS(app)
-
-sockets = Sockets(app)
-
-@sockets.route('/terminal')
-def terminal_socket(ws):
-    # Open a subprocess (bash, cmd, etc.)
-    process = subprocess.Popen(['bash'], stdout=subprocess.PIPE, stdin=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
-
-    try:
-        while not ws.closed:
-            message = ws.receive()
-            if message:
-                # Send command to the subprocess
-                process.stdin.write(message)
-                process.stdin.flush()
-
-                # Get the output
-                output = process.stdout.readline()
-                ws.send(output)
-    except Exception as e:
-        print("Socket error:", e)
-    finally:
-        process.kill()
 
 def run_npm_start():
     """Run npm start in a subprocess."""
     subprocess.run(['npm', 'start'], cwd='.')
+
+
+@app.route('/execute-command', methods=['POST'])
+def execute_command():
+    try:
+        command = request.json['command']
+        logging.info(f"Executing command: {command}")
+
+        # Execute the command and capture output
+        result = subprocess.run(
+            command, shell=True, text=True, 
+            capture_output=True, check=True
+        )
+
+        output = result.stdout
+        errors = result.stderr
+
+        print(f"Command output: {output}, errors: {errors}")
+        return jsonify({'output': output, 'errors': errors})
+
+    except subprocess.CalledProcessError as e:
+        # Handle the case where the subprocess returns a non-zero exit status
+        logging.error("Command failed", exc_info=True)
+        return jsonify({'output': e.stdout, 'errors': e.stderr}), 400
+
+    except Exception as e:
+        logging.error("Error handling command", exc_info=True)
+        return jsonify({'error': str(e)}), 500
+
 
 @app.route('/save-file', methods=['POST'])
 def save_file():
@@ -85,17 +92,6 @@ def get_file():
         return jsonify({'error': str(e)}), 500
 
 
-shell_processes = {}
-
-def get_shell(session_id):
-    if session_id not in shell_processes:
-        # Start a new shell process
-        shell = pexpect.spawn('/bin/bash', encoding='utf-8', timeout=None)
-        shell.setecho(False)
-        shell.logfile = sys.stdout  # Optionally log to stdout for debugging
-        shell_processes[session_id] = shell
-        print(f"Started new shell for session: {session_id}")
-    return shell_processes[session_id]
 
 @app.route('/process/local', methods=['POST'])
 def process_local():
@@ -997,5 +993,4 @@ def run_npm_start():
 if __name__ == "__main__":
     # Run npm start in a separate thread to avoid blocking Flask
     threading.Thread(target=run_npm_start).start()
-    server = pywsgi.WSGIServer(('', 7000), app, handler_class=WebSocketHandler)
-    server.serve_forever()
+    app.run(host="0.0.0.0", port=7000)

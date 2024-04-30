@@ -6,7 +6,7 @@ console.log("Using function from utils.js", getOrbitAllowed());
 
 export const elem = document.getElementById('3d-graph');
 
-export var Graph = ForceGraph3D({ controlType: 'orbit' })(elem)
+export const Graph = ForceGraph3D({ controlType: 'orbit' })(elem)
 
 export const chatbox = document.getElementById('messages')
 
@@ -90,93 +90,6 @@ async function navigateSequences(sequences, currentSequenceIndex = 0, currentNod
                 moveCameraToNode(node);
                 await new Promise(resolve => setTimeout(resolve, 2500)); // 2-second delay
             }
-        }
-    }
-}
-export async function clusterIsolatedNodes() {
-    const graphData = Graph.graphData();
-    const linkedNodes = new Set();
-    graphData.links.forEach(link => {
-        linkedNodes.add(link.source);
-        linkedNodes.add(link.target);
-    });
-
-    const isolatedNodes = graphData.nodes.filter(node => !linkedNodes.has(node.id));
-
-    if (isolatedNodes.length > 0) {
-        // Step 2: Group the isolated nodes by package
-        const packageGroups = {};
-        isolatedNodes.forEach(node => {
-            if (!packageGroups[node.id]) {
-                packageGroups[node.id] = [];
-            }
-            packageGroups[node.id].push(node);
-        });
-
-        // Step 3: Cluster the nodes within each package group
-        Object.values(packageGroups).forEach((group, index) => {
-            // Creating multiple layers of circles for a more spherical look
-            const layers = Math.ceil(Math.sqrt(group.length)); // Calculate how many layers are needed
-            const nodesPerLayer = Math.ceil(group.length / layers);
-            const layerRadiusIncrement = 10; // Increase each layer's radius
-
-            group.forEach((node, idx) => {
-                const layerIndex = Math.floor(idx / nodesPerLayer);
-                const angleStep = (5 * Math.PI) / nodesPerLayer;
-                const radius = 20 + layerIndex * layerRadiusIncrement; // Each layer is further out
-
-                node.fx = radius * Math.cos(idx * angleStep);
-                node.fy = radius * Math.sin(idx * angleStep);
-                node.fz = layerIndex * 15; // This spreads nodes out along the z-axis
-            });
-        });
-
-        // Step 4: Apply forces between package groups
-        const packageForce = d3.forceManyBody()
-            .filter(node => isolatedNodes.includes(node));
-
-        Graph.d3Force('packageForce', packageForce);
-
-        // Step 5: Update the graph with the new positions and forces
-        Graph.refresh();
-    }
-}
-
-export async function applyPackageForce(alpha) {
-    // Constants for force strengths, these can be adjusted
-    const attractionStrength = -1400; // Negative for attraction
-    const repulsionStrength = 2800;   // Positive for repulsion
-
-    // Your graph's nodes
-    const nodes = Graph.graphData().nodes;
-
-    for (let i = 0; i < nodes.length; ++i) {
-        for (let j = i + 1; j < nodes.length; ++j) {
-            const nodeA = nodes[i];
-            const nodeB = nodes[j];
-
-            // Calculate the distance between nodes in 3D space
-            const dx = nodeB.x - nodeA.x;
-            const dy = nodeB.y - nodeA.y;
-            const dz = nodeB.z - nodeA.z; // Include the z-dimension
-            const dist = Math.sqrt(dx * dx + dy * dy + dz * dz) || 1; // Avoid division by zero
-
-            // Choose the force based on whether nodes are in the same package
-            const samePackage = nodeA.package === nodeB.package;
-            const forceStrength = samePackage ? repulsionStrength : attractionStrength;
-            const force = (forceStrength * alpha) / dist;
-
-            // Apply the force in three dimensions
-            const forceX = (force * dx) / dist;
-            const forceY = (force * dy) / dist;
-            const forceZ = (force * dz) / dist; // Force in the z-dimension
-
-            nodeA.vx -= forceX;
-            nodeA.vy -= forceY;
-            nodeA.vz -= forceZ; // Apply force to z velocity
-            nodeB.vx += forceX;
-            nodeB.vy += forceY;
-            nodeB.vz += forceZ; // Apply force to z velocity
         }
     }
 }
