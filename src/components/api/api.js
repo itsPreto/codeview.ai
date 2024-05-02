@@ -114,10 +114,43 @@ Assistant:`;
     }
 }
 
-function updateTerminalOutput(data) {
-    terminalOutput.textContent += '\n' + data.output + '\n';
+export function updateTerminalOutput(output, errors) {
+    const terminalOutput = document.getElementById('terminal-output'); // Assuming the terminal's output element has this ID
+    if (output) {
+        terminalOutput.textContent += '\n' + output;
+    }
+    if (errors) {
+        terminalOutput.textContent += '\nError: ' + errors;
+    }
     terminalOutput.scrollTop = terminalOutput.scrollHeight; // Scroll to the bottom
 }
+
+export async function cmdLineApi(command) {
+    let formattedCommand = command.trim().replace(/\s+/g, ' ');
+    console.log("Formatted Command:", formattedCommand);
+    return fetch('http://127.0.0.1:8000/execute-command', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ command: formattedCommand })
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.json();
+    })
+    .then(data => {
+        console.log(data);
+        return data; // Return the data for further processing
+    })
+    .catch(error => {
+        console.error('Network error:', error);
+        throw error; // Re-throw to catch it in subsequent .then() in event listener
+    });
+}
+
 
 export async function loadJsonData(path) {
     try {
@@ -137,7 +170,7 @@ export async function loadJsonData(path) {
 
 export async function saveFileChanges(filePath, updatedContent) {
     try {
-        const response = await fetch('http://127.0.0.1:7000/save-file', {
+        const response = await fetch('http://127.0.0.1:8000/save-file', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -156,7 +189,7 @@ export async function saveFileChanges(filePath, updatedContent) {
 
 export async function fetchFileContent(filePath) {
     try {
-        const response = await fetch(`http://127.0.0.1:7000/get-file?filePath=${filePath}`);
+        const response = await fetch(`http://127.0.0.1:8000/get-file?filePath=${filePath}`);
 
         if (!response.ok) {
             throw new Error(`Failed to fetch file content for $ ${filePath}`);
@@ -176,7 +209,7 @@ let lastKnownModificationTime = 0;
 
 export async function checkForUpdates(jsonFileName) {
     try {
-        const response = await fetch(`http://127.0.0.1:7000/get-last-modified/${jsonFileName}`);
+        const response = await fetch(`http://127.0.0.1:8000/get-last-modified/${jsonFileName}`);
         const data = await response.json();
         if (data.last_modified > lastKnownModificationTime) {
             lastKnownModificationTime = data.last_modified;
@@ -197,31 +230,6 @@ function loadAndRefreshGraph(jsonFileName) {
         .catch(error => console.error('Failed to load graph data:', error));
 }
 
-export function cmdLineApi(command, output) {
-    // Trim and replace multiple spaces with a single space
-    let formattedCommand = command.trim().replace(/\s+/g, ' ');
-
-    console.log("Formatted Command:", formattedCommand);
-    fetch('http://127.0.0.1:7000/execute-command', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ command: formattedCommand })
-    })
-        .then(response => {
-            console.log("HTTP Status:", response.status); // Log the HTTP status
-            return response.json();
-        })
-        .then(data => {
-            console.log(data);
-            updateTerminalOutput(data);
-        })
-        .catch(error => {
-            console.error('Error:', error);
-            output.textContent += '\nError: ' + error.message;
-        });
-}
 
 
 export function transcribeAudioApi(formData) {
@@ -306,7 +314,7 @@ export async function fetchRepoDataAsync(repoId, isFileLevel = false) {
 }
 
 
-export function processLocalPath() {
+export async function processLocalPath() {
     var localPath = document.getElementById('local-path-input').value;
 
 
@@ -334,7 +342,7 @@ export function processLocalPath() {
 
 
 
-export function cloneAndProcessRepos() {
+export async function cloneAndProcessRepos() {
     var repoUrls = document.getElementById('repo-urls-input').value.split('\n');
 
     console.log("about to clone" + repoUrls);

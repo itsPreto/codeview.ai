@@ -128,9 +128,11 @@ export function createReadmeSummaryPrompt(readmeData) {
     //   n_predict: 200,
     //   temperature: 0.6
     // };
+
+    console.log("prompt: " + prompt);
   
     const completionParams = {
-      model: "lmstudio-ai/wizardlm/WizardLM-2-7B.Q4_K_S.gguf",
+      model: "lmstudio-ai/codeqwen60k/codeqwen-1_5-7b-chat-q5_k_m.gguf",
       messages: [
         { "role": "system", "content": "You are an excellent software engineer and assistant. Please consider the following conversation dialog prior to continuing the conversation." },
         { "role": "user", "content": prompt }
@@ -138,6 +140,8 @@ export function createReadmeSummaryPrompt(readmeData) {
       stream: true,
       ...params
     };
+
+    console.log("completionParams: " + JSON.stringify(completionParams));
   
     const response = await fetch(api_url, {
       method: 'POST',
@@ -147,8 +151,7 @@ export function createReadmeSummaryPrompt(readmeData) {
         'Content-Type': 'application/json',
         'Accept': 'text/event-stream',
         ...(params.api_key ? { 'Authorization': `Bearer ${params.api_key}` } : {})
-      },
-      signal: controller.signal,
+      }
     });
   
     console.log("Response status: " + response.status);

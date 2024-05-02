@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+  <title>DFP Force Graph</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></script>
+  <script src="https://unpkg.com/d3"></script>
+  <script src="https://unpkg.com/d3-force"></script>
+  <script src="https://unpkg.com/3d-force-graph"></script>
+  <script src="https://unpkg.com/three-spritetext"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked@3.0.7/marked.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dompurify/dist/purify.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/codemirror.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/components/prism-python.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/addon/fold/foldcode.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/addon/fold/foldgutter.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/addon/fold/brace-fold.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/mode/javascript/javascript.min.js"></script>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/addon/fold/foldgutter.min.css">
+</head>
+
+<body>
+  <div class="container" id="container">
+    <div id="graph-container">
+      <button id="fullscreen-bttn">
+        <i class="fa fa-expand"></i>
+      </button>
+
+      <div id="graph-name">currently on: </div>
+
+      <!-- Settings Button -->
+      <i id="settings-icon" class="fas fa-cog"
+        style="position: absolute; top: 20px; right: 100px; cursor: pointer; font-size: 24px; color: white;"></i>
+
+      <!-- Overlay -->
+
+      <button id="navUp-bttn" style='position: absolute;
+        top: 3px;
+        z-index: 3;
+        margin: 20px;
+        margin-left: inherit;
+        width: 50px;
+        color: black;
+        left: 14px;
+        display: inline;'>
+        <i class="fa fa-angle-double-left"></i></button>
+      <div class="search-container">
+        <input type="text" id="search-bar" placeholder="Search...">
+        <ul id="search-results"></ul>
+      </div>
+      <div id="3d-graph"></div>
+    </div>
+    <div class="resizer" id="resizer"></div> <!-- Divider -->
+    <div class="right-panel" id="right-panel">
+      <div class="terminal">
+        <!-- Terminal content goes here -->
+        <h2 id="terminal-heaeder" style="background-color: #585858;
+        color: white;
+        width: -webkit-fill-available;
+        padding: 10px;
+        text-align: center;
+        border-radius: 10px;
+        position: relative;
+        font-size: 18px;
+        font-weight: bold;">[ cmd ]</h2>
+        <pre id="terminal-output" style="
+        color: #fff;
+        white-space: pre-wrap;
+        text-wrap: balance;
+        padding: 20px;
+        border-radius: 8px;
+        background-color: #323232;
+        overflow: auto;
+        height: 21vh;"></pre>
+        <input type="text" id="terminal-input" style="    width: 100%;
+          padding: 20px;
+          color: #fff;
+          background: #333;
+          border: none;
+          border-top: 1px solid #555;" placeholder="Enter command">
+      </div>
+      <div class="chat">
+        <div class="minimized" id="chatbox-container">
+          <div id="chatbox">
+            <div id="chatbox-header"> [ chat ]
+            </div>
+            <div id="chatbox-content" style="margin-top: 8px;">
+              <div id="messages"></div>
+              <div id="input-container">
+                <textarea id="user-input" rows="3" placeholder="Type your message..."></textarea>
+                <div id="toggleRecording" class="audio-recording-container">
+                  <i class="start-recording-button fa fa-microphone" aria-hidden="true"></i>
+                  <div class="recording-contorl-buttons-container hide">
+                    <i class="cancel-recording-button fa fa-times-circle-o" aria-hidden="true"></i>
+                    <div class="recording-elapsed-time">
+                      <i class="red-recording-dot fa fa-circle" aria-hidden="true"></i>
+                      <p class="elapsed-time"></p>
+                    </div>
+                    <i class="stop-recording-button fa fa-stop-circle-o" aria-hidden="true"></i>
+                  </div>
+                  <div class="text-indication-of-audio-playing-container">
+                    <p class="text-indication-of-audio-playing hide">
+                      playing...<span>.</span><span>.</span><span>.</span></p>
+                  </div>
+                </div>
+                <div class="overlay hide">
+                  <div class="browser-not-supporting-audio-recording-box">
+                    <p>To record audio, use browsers like Chrome and Firefox that support audio recording.</p>
+                    <button type="button" class="close-browser-not-supported-box">Ok.</button>
+                  </div>
+                </div>
+
+                <audio controls class="audio-element hide">
+                </audio>
+                <i id="send-button" class='fa fa-send'></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="editor">
+        <!-- Editor content goes here -->
+        <div id="editor-header">[ edit ]</h2>
+          <i id="save-button" class='fa fa-save'></i>
+        </div>
+        <textarea id="code-editor"></textarea> <!-- CodeMirror will attach to this textarea -->
+      </div>
+    </div>
+  </div>
+
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.132.2/build/three.module.js",
+        "three/addons/": "https://unpkg.com/three@0.132.2/examples/jsm/"
+      }
+    }
+  </script>
+  <script src="../components/terminal/terminal.js"></script>
+  <script src="../components/api/api.js" type="module"></script>
+  <script src="../components/chat/chat.js" type="module"></script>
+  <script src="../components/graph/graph.js" type="module"></script>
+  <script src="../components/llama/llama.js" type="module"></script>
+  <script src="../components/audio/audio.js" type="module"></script>
+  <script src="./utils.js" type="module"></script>
+  <script src="./index.js" type="module"></script>
+</body>
+
+</html>
