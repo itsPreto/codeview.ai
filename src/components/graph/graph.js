@@ -25,6 +25,8 @@ export const saveButton = document.getElementById('save-button');
 export const searchBar = document.getElementById('search-bar');
   
 export const fullscreenButton = document.getElementById('fullscreen-bttn');
+
+export const settingsIcon = document.getElementById('settings-icon');
   
 export const sendButton = document.getElementById('send-button');
 
@@ -32,11 +34,29 @@ export const chatboxContainer = document.getElementById('chatbox-container');
 
 export const searchContainer = document.getElementById('search-container');
 
+export const codeEditor = document.getElementById('code-editor');
+
 export const messages = document.getElementById('messages')
+
+export const settingsBtn = document.getElementById('settings-icon')
   
 export const userInputField = document.getElementById('user-input');
 
-export const settingsIcon = document.getElementById('settings-icon');
+export const overlay = document.getElementById('overlay')
+
+export const loadingSpinner = document.getElementById('loading-spinner')
+
+export const percentComplete = document.getElementById('percent-complete')
+
+export const localPathBtn = document.getElementById('local_path_btn')
+
+export const cloneRepoBtn = document.getElementById('clone_repo_btn')
+
+export const repoUrlsInput = document.getElementById('repo-urls-input')
+
+export const localPathInput = document.getElementById('local-path-input')
+
+export const inputForm = document.getElementById('input-form')
 
 export const container = document.getElementById('container')
 
@@ -52,7 +72,7 @@ export const chatboxHeader = document.getElementById('chatbox-header');
 export const editorHeader = document.getElementById('editor-header');
 
 // Get the content elements
-export const terminalContent = document.getElementById('terminal');
+export const terminalContent = document.getElementById('panel-section terminal');
 export const chatboxContent = document.getElementById('chatbox-container');
 export const editorContent = document.querySelector('.editor');
 

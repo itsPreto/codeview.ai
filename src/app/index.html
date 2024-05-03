@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
-  <title>Force Graph</title>
+  <title> Force Graph</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></script>
   <script src="https://unpkg.com/d3"></script>
@@ -30,68 +30,56 @@
 <body>
   <div class="container" id="container">
     <div id="graph-container">
-      <button id="fullscreen-bttn">
-        <i class="fa fa-expand"></i>
-      </button>
-
-      <div id="graph-name">currently on: </div>
-
-      <!-- Settings Button -->
-      <i id="settings-icon" class="fas fa-cog"
-        style="position: absolute; top: 20px; right: 100px; cursor: pointer; font-size: 24px; color: white;"></i>
-
-      <!-- Overlay -->
-
-      <button id="navUp-bttn" style='position: absolute;
-        top: 3px;
-        z-index: 3;
-        margin: 20px;
-        margin-left: inherit;
-        width: 50px;
-        color: black;
-        left: 14px;
-        display: inline;'>
-        <i class="fa fa-angle-double-left"></i></button>
+      <div id="main-header-container">
+        <div id="graph-name">currently on: </div>
+        <div id="right-btn-container">
+          <button id="fullscreen-bttn">
+            <i class="fa fa-expand"></i>
+          </button>
+          <i id="settings-icon" class="fas fa-cog"></i>
+        </div>
+        <div id="left-btn-container">
+          <button id="navUp-bttn">
+            <i class="fa fa-angle-double-left"></i></button>
+        </div>
+      </div>
       <div class="search-container">
         <input type="text" id="search-bar" placeholder="Search...">
         <ul id="search-results"></ul>
       </div>
       <div id="3d-graph"></div>
     </div>
+    <div id="overlay">
+      <div id="input-form">
+        <textarea id="local-path-input" placeholder="Enter local path"></textarea>
+        <button id="local_path_btn">local path</button>
+        <textarea id="repo-urls-input" placeholder="Enter Git URLs, one per line"></textarea>
+        <button id="clone_repo_btn">git repo</button>
+      </div>
+      <div id="loading-spinner" hidden>
+        Processing... <span id="percent-complete">0%</span>
+      </div>
+    </div>
     <div class="resizer" id="resizer"></div> <!-- Divider -->
     <div class="right-panel" id="right-panel">
-      <div class="terminal">
-        <!-- Terminal content goes here -->
-        <h2 id="terminal-heaeder" style="background-color: #585858;
-        color: white;
-        width: -webkit-fill-available;
-        padding: 10px;
-        text-align: center;
-        border-radius: 10px;
-        position: relative;
-        font-size: 18px;
-        font-weight: bold;">[ cmd ]</h2>
-        <pre id="terminal-output" style="
-        color: #fff;
-        white-space: pre-wrap;
-        text-wrap: balance;
-        padding: 20px;
-        border-radius: 8px;
-        background-color: #323232;
-        overflow: auto;
-        height: 21vh;"></pre>
-        <input type="text" id="terminal-input" style="    width: 100%;
-          padding: 20px;
-          color: #fff;
-          background: #333;
-          border: none;
-          border-top: 1px solid #555;" placeholder="Enter command">
+
+      <div class="panel-section terminal">
+        <div class="panel-header">
+          [ cmd ]
+          <button class="toggle-size" data-target="terminal"><i class="fas fa-expand-arrows-alt"></i></button>
+        </div>
+        <pre id="terminal-output"></pre>
+        <input type="text" id="terminal-input" placeholder="Enter command">
       </div>
-      <div class="chat">
+
+      <div class="panel-section chat">
         <div class="minimized" id="chatbox-container">
+          <div class="panel-header">
+            [ chat ]
+            <button class="toggle-size" data-target="chat"><i class="fas fa-expand-arrows-alt"></i></button>
+          </div>
+
           <div id="chatbox">
-            <div id="chatbox-header"> [ chat ]
-            </div>
             <div id="chatbox-content" style="margin-top: 8px;">
               <div id="messages"></div>
               <div id="input-container">
@@ -126,9 +114,11 @@
           </div>
         </div>
       </div>
-      <div class="editor">
-        <!-- Editor content goes here -->
-        <div id="editor-header">[ edit ]</h2>
+
+      <div class="panel-section editor">
+        <div class="panel-header">
+          [ edit ]
+          <button class="toggle-size" data-target="editor" style="right: 4px;"><i class="fas fa-expand-arrows-alt"></i></button>
           <i id="save-button" class='fa fa-save'></i>
         </div>
         <textarea id="code-editor"></textarea> <!-- CodeMirror will attach to this textarea -->
@@ -150,7 +140,7 @@
   <script src="../components/graph/graph.js" type="module"></script>
   <script src="../components/llama/llama.js" type="module"></script>
   <script src="../components/audio/audio.js" type="module"></script>
-  <script src="./utils.js" type="module"></script>
+  <script src="../utils.js" type="module"></script>
   <script src="./index.js" type="module"></script>
 </body>
 

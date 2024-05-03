@@ -1,54 +1,49 @@
 // index.js: the main file for the application
 
 import {
-  Graph, elem, graphName, topButton, graphContainer,
-  saveButton, searchBar, fullscreenButton, sendButton, chatboxContainer, searchContainer, messages,
-  userInputField, settingsIcon, container, resizer, leftPanel, rightPanel, moveCameraToNode, searchResults, editor, editorContent
+  Graph, elem, graphName, topButton, graphContainer, codeEditor,
+  saveButton, searchBar, fullscreenButton, settingsIcon, sendButton, chatboxContainer, searchContainer, messages,
+  localPathBtn, cloneRepoBtn, repoUrlsInput, localPathInput, container, resizer, leftPanel, overlay, userInputField,
+  inputForm, percentComplete, loadingSpinner, rightPanel, moveCameraToNode, searchResults, editor, editorContent
 } from '../components/graph/graph.js';
 import {
-  appState, cmdLineApi, updateTerminalOutput, sendUserInputToApi, loadFileTrees, fetchRepoDataAsync, fetchFileContent
+  appState, cmdLineApi, updateTerminalOutput, sendUserInputToApi, loadFileTrees, fetchFileContent,
 } from '../components/api/api.js';
-import { allowOrbit, getOrbitAllowed, getResizing, linkCounts, setResizing } from '../utils.js'
+import { allowOrbit, getOrbitAllowed, getResizing, linkCounts, setResizing, reverseFlowAndColorize } from '../utils.js'
 import { fetchFileSummary } from '../components/llama/llama.js';
 
+// Define graph levels as constants for better control
+const GRAPH_LEVELS = {
+  INSANITY: 'INSANITY-LEVEL',
+  MODULES: 'MODULES-LEVEL',
+  FILES: 'FILES-LEVEL'
+};
+
 let shiftKeyPressed = false;
+let currentLevel = GRAPH_LEVELS.MODULES;
 let currBillboard = null;
 
+// Current level state
+
 // Start loading data/jsons
-loadFileTrees().then(() => {
-  console.log('Initialization complete. Proceed with application logic.');
-  // Initialize the root level graph (contains the module-module deps)
-  fetchRepoDataAsync('repos_graph', true).then(graphData => {
-    initializeGraph(graphData)
-  }).catch(error => {
-    console.error("Error fetching data: ", error);
-  });
-});
+loadFileTrees()
 
-function updateGraphName(name) {
-  console.log(`name: ${name}`)
-  graphName.textContent = `currently on: ${name}`
-}
-
-function updateTopLevelButton() {
-  if (appState.isAtTopLevel) {
-    topButton.style.display = 'none';
-  } else {
-    topButton.style.display = 'inline';
+function updateGraphName(level, nodeId) {
+  console.log(`level: ${level}`)
+  if (level === GRAPH_LEVELS.FILES) {
+    graphName.textContent = `currently on: ${nodeId}`
+    Graph.enableNodeDrag(false);
+  } else if (level === GRAPH_LEVELS.MODULES) {
+    graphName.textContent = `currently on: modules`
+  } else if (level === GRAPH_LEVELS.INSANITY) {
+    graphName.textContent = `currently on: all`
+    Graph.enableNodeDrag(false);
   }
 }
 
 // Commonly used constants and utilities
 const cameraTransitionDuration = 1900;
 const cameraDistance = 40;
-
-function flattenGraph() {
-  const nodes = Graph.graphData().nodes;
-  nodes.forEach(node => {
-    node.z = 0; // Set z-coordinate to 0 for all nodes
-    node.vz = 0; // Prevent movement along the z-axis
-  });
-}
 
 
 function formatNodeLabel(node) {
@@ -136,11 +131,11 @@ function nodeObjectWithLabel(node) {
   return group;
 }
 
-export async function initializeGraph(graphData) {
-  updateGraphName("root");
-  Graph.d3Force('packageForce', applyPackageForce);
-  updateTopLevelButton();
-
+// Initialize graph with provided data and level specifics
+// In the initializeGraph function, add a setup for the repository filter
+async function initializeGraph(graphData, level, nodeId) {
+  currentLevel = level;
+  updateGraphName(level, nodeId);
   Graph.graphData(graphData)
     .height(window.innerHeight)
     .linkWidth(3)
@@ -153,18 +148,120 @@ export async function initializeGraph(graphData) {
     .backgroundColor('#00000000')
     .width(window.innerWidth / 2 + 100)
     .linkDirectionalParticleColor(node => node.color)
+    .d3Force('packageForce', applyPackageForce)
     .linkDirectionalParticleWidth(1)
     .linkDirectionalParticleSpeed(0.0023)
     .onNodeClick(handleNodeClick)
     .nodeThreeObject(nodeObjectWithLabel);
 
-  Graph.onEngineTick(() => flattenGraph());
+  // if (level === GRAPH_LEVELS.INSANITY) {
+  //   setupRepositoryFilters(graphData); // Call to setup filters
+  // }
 
   await clusterIsolatedNodes(); // Ensure isolated nodes are clustered on initialization
   setupCameraOrbit();
   Graph.refresh();
+
+  // Adjust top button for navigation
+  updateTopButton();
 }
 
+// Function to extract repository name from the file path
+function extractRepoName(filePath) {
+  const repoMatch = /\/repos\/([^\/]+)/.exec(filePath);
+  return repoMatch ? repoMatch[1] : 'Unknown';
+}
+
+// Adjusted function to setup repository filters
+function setupRepositoryFilters(graphData) {
+  const filterContainer = document.createElement('div');
+  filterContainer.id = 'repo-filter-container';
+  filterContainer.style.position = 'absolute';
+  filterContainer.style.left = '10px';
+  filterContainer.style.top = '10px';
+  filterContainer.style.display = 'flex';
+  filterContainer.style.flexDirection = 'column';
+  graphContainer.appendChild(filterContainer);
+
+  const repos = new Set();
+  graphData.nodes.forEach(node => repos.add(extractRepoName(node.id)));
+
+  repos.forEach(repo => {
+    const checkbox = document.createElement('input');
+    checkbox.type = 'checkbox';
+    checkbox.checked = true;
+    checkbox.id = repo;
+    checkbox.onchange = () => toggleRepoVisibility(repo, checkbox.checked);
+
+    const label = document.createElement('label');
+    label.htmlFor = repo;
+    label.textContent = repo;
+
+    filterContainer.appendChild(checkbox);
+    filterContainer.appendChild(label);
+  });
+}
+
+// Function to toggle visibility based on repository
+function toggleRepoVisibility(repo, isVisible) {
+  Graph.graphData().nodes.forEach(node => {
+    if (extractRepoName(node.id) === repo) {
+      node.hidden = !isVisible; // You may need to adjust how you handle visibility
+    }
+  });
+  Graph.graphData().links.forEach(link => {
+    if (extractRepoName(link.source) === repo || extractRepoName(link.target) === repo) {
+      link.hidden = !isVisible; // You may need to adjust how you handle visibility
+    }
+  });
+  Graph.refresh();
+}
+
+
+// Fetch data for graphs based on level and initialize the graph
+// Function to fetch graph data and initialize graph at a specific node level
+async function fetchAndInitializeGraph(level, nodeId = null) {
+  let filePath;
+  let basePath = "../../assets/";
+  switch (level) {
+    case GRAPH_LEVELS.INSANITY:
+      filePath = 'full_graph.json';
+      break;
+    case GRAPH_LEVELS.MODULES:
+      filePath = 'repos_graph.json';
+      break;
+    case GRAPH_LEVELS.FILES:
+      filePath = `files/${nodeId}.json`;
+      break;
+  }
+  await fetchJson(basePath + filePath, level, nodeId);
+}
+
+async function fetchJson(filePath, level, nodeId) {
+  try {
+    const response = await fetch(filePath);
+    const graphData = await response.json();
+    // Reverse the link directions right after fetching the data.
+    reverseFlowAndColorize(graphData);
+    initializeGraph(graphData, level, nodeId);
+  } catch (error) {
+    console.error("Error fetching graph data:", error);
+  }
+}
+
+// Update the top button to reflect possible actions based on current level
+function updateTopButton() {
+  if (currentLevel === GRAPH_LEVELS.MODULES) {
+    topButton.textContent = 'full';
+    topButton.onclick = () => fetchAndInitializeGraph(GRAPH_LEVELS.INSANITY);
+  } else if (currentLevel === GRAPH_LEVELS.INSANITY) {
+    topButton.textContent = 'modules';
+    topButton.onclick = () => fetchAndInitializeGraph(GRAPH_LEVELS.MODULES);
+  } else if (currentLevel === GRAPH_LEVELS.FILES) {
+    topButton.textContent = 'modules';
+    topButton.onclick = () => fetchAndInitializeGraph(GRAPH_LEVELS.MODULES);
+  }
+}
 
 export async function clusterIsolatedNodes() {
   const graphData = Graph.graphData();
@@ -174,6 +271,10 @@ export async function clusterIsolatedNodes() {
     linkedNodes.add(link.target);
   });
 
+  const totalElements = graphData.nodes.length + graphData.links.length;
+  const radiusBase = 200; // Base radius for small graphs
+  const radiusMultiplier = Math.max(1, Math.floor(totalElements / 1000)); // Increase radius based on size
+
   // Identify isolated nodes
   const isolatedNodes = graphData.nodes.filter(node => !linkedNodes.has(node.id));
 
@@ -181,72 +282,63 @@ export async function clusterIsolatedNodes() {
     // Group the isolated nodes by 'user'
     const userGroups = {};
     isolatedNodes.forEach(node => {
-      const userKey = node.user || 'unknown'; // Default group for nodes without a 'user'
+      const userKey = node.user || 'unknown';
       userGroups[userKey] = userGroups[userKey] || [];
       userGroups[userKey].push(node);
     });
 
     // Cluster the nodes within each user group
     Object.values(userGroups).forEach((group, index) => {
-      const radius = 300 * (index + 1); // Increasing radius for each group
+      const radius = radiusBase * radiusMultiplier * (index + 1);
       const angleStep = (2 * Math.PI) / group.length;
 
       group.forEach((node, idx) => {
-        node.fx = radius * Math.cos(idx * angleStep); // Fixed x position
-        node.fy = radius * Math.sin(idx * angleStep); // Fixed y position
-        node.fz = index * 100; // Stagger groups along z-axis to reduce visual clutter
+        node.fx = radius * Math.cos(idx * angleStep);
+        node.fy = radius * Math.sin(idx * angleStep);
+        node.fz = index * 300; // Stagger groups along z-axis to reduce visual clutter
       });
     });
 
-    // Apply forces to separate different user groups
-    const userGroupForce = d3.forceManyBody()
-      .strength(-500)
-      .distanceMax(1000)
-      .filter(node => isolatedNodes.includes(node));
-
-    Graph.d3Force('userGroupForce', userGroupForce);
-
-    // Refresh the graph with new positions
     Graph.refresh();
   }
 }
 
 
 export async function applyPackageForce(alpha) {
-  // Constants for force strengths, these can be adjusted
-  const attractionStrength = -284; // Negative for attraction
-  const repulsionStrength = 4790;   // Positive for repulsion
+  const graphData = Graph.graphData();
+  const totalElements = graphData.nodes.length + graphData.links.length;
+  const sizeFactor = Math.max(1, Math.floor(totalElements / 100));
 
-  // Your graph's nodes
-  const nodes = Graph.graphData().nodes;
+  // Dynamically adjust strengths based on graph size
+  const attractionStrength = -284;
+  const repulsionStrength = 17790;
+
+  const nodes = graphData.nodes;
 
   for (let i = 0; i < nodes.length; ++i) {
     for (let j = i + 1; j < nodes.length; ++j) {
       const nodeA = nodes[i];
       const nodeB = nodes[j];
 
-      // Calculate the distance between nodes in 3D space
       const dx = nodeB.x - nodeA.x;
       const dy = nodeB.y - nodeA.y;
-      const dz = nodeB.z - nodeA.z; // Include the z-dimension
-      const dist = Math.sqrt(dx * dx + dy * dy + dz * dz) || 1; // Avoid division by zero
+      const dz = nodeB.z - nodeA.z;
+      const dist = Math.sqrt(dx * dx + dy * dy + dz * dz) || 1;
 
-      // Choose the force based on whether nodes are in the same package
       const samePackage = nodeA.user === nodeB.user;
       const forceStrength = samePackage ? repulsionStrength : attractionStrength;
       const force = (forceStrength * alpha) / dist;
 
-      // Apply the force in three dimensions
       const forceX = (force * dx) / dist;
       const forceY = (force * dy) / dist;
-      const forceZ = (force * dz) / dist; // Force in the z-dimension
+      const forceZ = (force * dz) / dist;
 
       nodeA.vx -= forceX;
       nodeA.vy -= forceY;
-      nodeA.vz -= forceZ; // Apply force to z velocity
+      nodeA.vz -= forceZ;
       nodeB.vx += forceX;
       nodeB.vy += forceY;
-      nodeB.vz += forceZ; // Apply force to z velocity
+      nodeB.vz += forceZ;
     }
   }
 }
@@ -258,6 +350,8 @@ async function handleNodeHover(node) {
   if (shiftKeyPressed) {
     try {
       const fileContent = await fetchFileContent(node.id);
+      let constrainedWidth = ((container.style.width - graphContainer.style.width) - 50) + 'px';
+      editorContent.style.width = constrainedWidth
       editor.setValue(fileContent);
       fetchFileSummary(node.id);
     } catch (error) {
@@ -265,19 +359,22 @@ async function handleNodeHover(node) {
     }
   }
 }
-
-// Function to handle node clicks, change graph context or detail view
 async function handleNodeClick(node) {
   const distRatio = 1 + cameraDistance / Math.hypot(node.x, node.y, node.z);
   updateCameraPosition(node, distRatio);
   await new Promise(resolve => setTimeout(resolve, cameraTransitionDuration));
-  if (appState.isAtTopLevel) {
-    appState.isAtTopLevel = false;
-    await loadNewGraph(node);
-  } else {
-    // Handle non-top level node clicks if necessary
+
+  if (currentLevel === GRAPH_LEVELS.MODULES) {
+    // Load the files-level graph for the clicked module
+    fetchAndInitializeGraph(GRAPH_LEVELS.FILES, node.id);
+  } else if (currentLevel === GRAPH_LEVELS.FILES) {
+    // Potentially handle clicks within a file-level graph if needed
+    console.log('File node clicked:', node.id);
+    // Additional behavior can be added here if nodes within FILES-LEVEL should be interactive
   }
 }
+
+
 
 // Camera orbit functionality setup
 function setupCameraOrbit() {
@@ -307,36 +404,6 @@ function setupCameraOrbit() {
   }, 20);
 }
 
-// Function to load a new graph context when a node is clicked
-async function loadNewGraph(node) {
-  try {
-    const repoGraphData = await fetchRepoDataAsync(node.id);
-    updateGraphName(node.id);
-    updateTopLevelButton();
-    node.description = `${node.description} - Files: ${repoGraphData.nodes.length}`;
-    Graph.graphData(repoGraphData);
-    Graph.nodeThreeObject(nodeObjectWithLabel);
-    appState.isAtTopLevel = false;
-    Graph.refresh();
-  } catch (error) {
-    console.error('Error loading new graph data:', error);
-  }
-}
-
-
-function handleMouseMove(e) {
-  if (!getResizing()) return;
-  // resizer.style.background = '#fa4090'
-  let offset = e.clientX - container.getBoundingClientRect().left;
-  let containerWidth = container.clientWidth;
-  if (offset < 50 || offset > containerWidth - 50) return;  // Minimum width constraint
-  leftPanel.style.width = offset + 'px';
-  Graph.width(offset);
-  rightPanel.style.width = (containerWidth - offset) + 'px';
-  editorContent.style.width = rightPanel.style.width - 20
-
-}
-
 function stopResize(e) {
   setResizing(false);
   document.removeEventListener('mousemove', handleMouseMove);
@@ -363,7 +430,37 @@ function populateSearchResults(query) {
   });
 }
 
+var overLayWidth = window.innerWidth * 0.32;
 
+function handleMouseMove(e) {
+  if (!getResizing()) return;
+
+  let offset = e.clientX - container.getBoundingClientRect().left;
+  let containerWidth = container.clientWidth;
+  let minGraphWidth = window.innerWidth * 0.32;
+
+  // Ensure graph minimum width is not breached
+  if (offset < minGraphWidth) offset = minGraphWidth;
+  if (offset > containerWidth - 50) return; // Maintaining a minimum right panel width
+
+  leftPanel.style.width = `${offset}px`;
+  Graph.width(offset);
+  overlay.style.width = `${offset}px`;
+  rightPanel.style.width = `${containerWidth - offset}px`;
+  editorContent.style.width = `${containerWidth - offset - 30}px`;
+ // Update graphName position
+ adjustGraphNamePosition(offset, minGraphWidth, containerWidth);
+}
+
+function adjustGraphNamePosition(currentWidth, minWidth, totalWidth) {
+
+  if (currentWidth <= minWidth + 80) {
+      graphName.style.left = '27%';
+  } 
+  else if (currentWidth <= minWidth * 1.6) {
+    graphName.style.left = '39%'; 
+  }
+}
 
 function createFPSCounter() {
   const counter = document.createElement('div');
@@ -397,7 +494,6 @@ function createFPSCounter() {
   updateCounter();
 }
 
-let isPastelBackground = false;
 
 function toggleFullScreen() {
   if (!document.fullscreenElement) {
@@ -422,11 +518,9 @@ function toggleFullScreen() {
 
 
 function toggleOverlay() {
-  var overlay = document.getElementById('overlay');
-  overlay.style.display = overlay.style.display === 'none' ? 'block' : 'none';
+  // elem.style.visibility = 'hidden';
+  overlay.style.bottom = 0;
 }
-
-
 
 
 // Function to handle fullscreen change
@@ -444,20 +538,171 @@ function handleFullscreenChange() {
   }
 }
 
+
+let percent = 0;
+let interval;
+
+
+function toggleProcessing(start) {
+  ;
+  loadingSpinner.hidden = !start;
+  userInputField.hidden = start;
+
+  if (start) {
+    percent = 0;
+    interval = setInterval(() => {
+      if (percent < 90) {
+        percent += 1;
+        percentComplete.textContent = percent + '%';
+      }
+    }, 2000);
+  } else {
+    clearInterval(interval);
+  }
+}
+
+function hideOverlay() {
+  // elem.style.visibility = "visible";
+  overlay.style.bottom = '-100%'; // Move overlay out of view
+}
+
+function handleResponse(response) {
+  if (response.ok) {
+    response.json().then(data => {
+      console.log(data);
+      alert('Processing completed successfully.');
+      finishLoading();
+    });
+  } else {
+    throw new Error('Failed to process.');
+  }
+}
+
+function handleError(error) {
+  console.error('Error:', error);
+  alert('Failed to process.');
+  finishLoading();
+}
+
+function finishLoading() {
+  clearInterval(interval);
+  percentComplete.textContent = '100%';
+  setTimeout(() => {
+    loadingSpinner.hidden = true;
+    inputForm.hidden = false;
+    percent = 0;
+    percentComplete.textContent = '0%';
+    hideOverlay(); // Hide the overlay after processing is complete
+  }, 500);
+}
+
+export async function processLocalPath() {
+  toggleProcessing(true);
+  const localPath = document.getElementById('local-path-input').value;
+
+  try {
+    const response = await fetch('http://127.0.0.1:8000/process/local', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ path: localPath })
+    });
+
+    handleResponse(response);
+  } catch (error) {
+    handleError(error);
+  }
+}
+
+export async function cloneAndProcessRepos() {
+  toggleProcessing(true);
+  const repoUrls = document.getElementById('repo-urls-input').value.split('\n');
+
+  try {
+    const response = await fetch('http://127.0.0.1:8000/clone_and_process', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ repo_urls: repoUrls })
+    });
+
+    handleResponse(response);
+  } catch (error) {
+    handleError(error);
+  }
+}
+
 // LISTENERS
 
 document.addEventListener('DOMContentLoaded', function () {
 
+  fetchAndInitializeGraph(GRAPH_LEVELS.MODULES);
+
+  overlay.style.width = elem.style.width;
+  codeEditor.style.width = `${rightPanel.style.width - 100}px`;
+
   settingsIcon.addEventListener('click', toggleOverlay);
 
-  // repoUrlsInput.addEventListener('click', cloneAndProcessRepos);
+  const buttons = document.querySelectorAll('.toggle-size');
+  buttons.forEach(button => {
+    button.addEventListener('click', function() {
+      const target = this.getAttribute('data-target');
+      const targetDiv = document.querySelector(`.${target}`);
+      const isMaximized = targetDiv.classList.contains('maximized');
 
-  // localPathInput.addEventListener('click', processLocalPath);
+      document.querySelectorAll('.panel-section').forEach(div => {
+        if (div !== targetDiv) {
+          div.classList.remove('maximized');
+          div.style.transition = "all 0.5s ease-in-out";
+          div.style.flex = '1';
+        }
+      });
+
+      if (isMaximized) {
+        targetDiv.classList.remove('maximized');
+        targetDiv.style.transition = "all 0.5s ease-in-out";
+        targetDiv.style.flex = '1';
+      } else {
+        targetDiv.classList.add('maximized');
+        targetDiv.style.transition = "all 0.5s ease-in-out";
+        targetDiv.style.flex = '10';
+      }
+    });
+  });
 
   fullscreenButton.addEventListener('click', toggleFullScreen);
 
+  // Event listener for top button
+  topButton.addEventListener('click', () => {
+    if (currentLevel === GRAPH_LEVELS.MODULES) {
+      fetchAndInitializeGraph(GRAPH_LEVELS.INSANITY);
+    } else {
+      fetchAndInitializeGraph(GRAPH_LEVELS.MODULES);
+    }
+  });
+
+  cloneRepoBtn.addEventListener('click', () => {
+    if (repoUrlsInput.value) {
+      cloneAndProcessRepos();
+    } else {
+      alert('Please enter a list of repository URLs');
+    }
+  });
+
+  localPathBtn.addEventListener('click', () => {
+    if (localPathInput.value) {
+      processLocalPath();
+    }
+  });
+
+  window.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+      hideOverlay();
+    }
+  });
 
   graphContainer.style.width = window.innerWidth / 2;
+
+  // overlay.style.width = window.innerWidth / 2;
+
 
   elem.style.overflowY = 'hidden';
   elem.style.overflowX = 'hidden';
@@ -509,8 +754,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-
-
   resizer.addEventListener('mousedown', () => {
     setResizing(true);
     document.addEventListener('mousemove', handleMouseMove);
@@ -530,11 +773,9 @@ document.addEventListener('DOMContentLoaded', function () {
   createFPSCounter();
 
   window.addEventListener('resize', () => {
-    // Graph.width(window.innerWidth / 2);
+    Graph.width(window.innerWidth / 2);
     Graph.height(window.innerHeight);
   });
-
-  // overlayContent.addEventListener('click', toggleOverlay);
 
   userInputField.addEventListener('keydown', async e => {
     if (e.keyCode === 13 && !e.shiftKey) {
@@ -553,15 +794,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
   sendButton.addEventListener('click', async () => {
     await sendUserInputToApi();
-  });
-
-  topButton.addEventListener('click', async () => {
-    appState.isAtTopLevel = true;
-
-    // Fetch and load top level data
-    const topData = await fetchRepoDataAsync('repos_graph', true);
-
-    initializeGraph(topData);
   });
 
 

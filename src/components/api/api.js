@@ -2,8 +2,8 @@
 
 import { reverseFlowAndColorize, updateChatContext, rollingContext, getLlamaRunning, allowLlamaRun } from '../../utils.js';
 // console.log("Using function from utils.js", getOrbitAllowed());
-import { chatbox, terminalOutput, userInputField, messages } from '../graph/graph.js';
-import { llama } from '../llama/llama.js'
+import { chatbox, terminalOutput, messages, settingsBtn, overlay, userInputField,
+    inputForm, percentComplete, loadingSpinner } from '../graph/graph.js';import { llama } from '../llama/llama.js'
 
 export const appState = {
     isAtTopLevel: true,
@@ -14,7 +14,7 @@ export const appState = {
 };
 
 
-export let basePath = "../..";
+let basePath = "../..";
 
 export function displayResponseInChatbox(responseText, responseElement) {
     // Clear existing content or manage it appropriately
@@ -32,6 +32,7 @@ export function displayResponseInChatbox(responseText, responseElement) {
 
 
 export function addUserMessageToChatbox(message) {
+    console.log("Adding user message to chatbox:", message);
     // Assuming user inputs are plain text and do not require Markdown rendering
     // For Markdown, you can use the same approach as in displayResponseInChatbox
     const messageEl = document.createElement('div');
@@ -205,32 +206,25 @@ export async function fetchFileContent(filePath) {
     }
 }
 
-let lastKnownModificationTime = 0;
+// Store last known modification times for each file
+let lastModificationTimes = {
+    'repos_graph.json': 0,
+    'full_graph.json': 0
+};
 
 export async function checkForUpdates(jsonFileName) {
     try {
         const response = await fetch(`http://127.0.0.1:8000/get-last-modified/${jsonFileName}`);
         const data = await response.json();
-        if (data.last_modified > lastKnownModificationTime) {
-            lastKnownModificationTime = data.last_modified;
-            loadAndRefreshGraph(jsonFileName);
+        if (data.last_modified > lastModificationTimes[jsonFileName]) {
+            lastModificationTimes[jsonFileName] = data.last_modified;
+            return jsonFileName;  // Return the updated file name
         }
     } catch (error) {
-        console.error('Failed to fetch update info:', error);
+        console.error('Failed to fetch update info for', jsonFileName, ':', error);
     }
+    return null;  // Return null if no update was necessary or an error occurred
 }
-
-function loadAndRefreshGraph(jsonFileName) {
-    fetch(`/data/${jsonFileName}`)
-        .then(response => response.json())
-        .then(graphData => {
-            Graph.graphData(graphData);
-            Graph.refresh();
-        })
-        .catch(error => console.error('Failed to load graph data:', error));
-}
-
-
 
 export function transcribeAudioApi(formData) {
     fetch('http://127.0.0.1:8080/inference', {
@@ -283,98 +277,40 @@ export async function sendUserInputToApi() {
     }
 }
 
-// It's expected to return a promise that resolves with the graph data.
-export async function fetchRepoDataAsync(repoId, isFileLevel = false) {
-    // Determine the file path based on the isFileLevel flag.
-    const filePath = isFileLevel ? `${basePath}/assets/${repoId}.json` : `${basePath}/assets/files/${repoId}.json`;
+// export async function fetchRepoDataAsync(repoId, isFileLevel = false) {
+//     // Determine the file path based on the isFileLevel flag.
+//     const filePath = isFileLevel ? `${basePath}/assets/${repoId}.json` : `${basePath}/assets/files/${repoId}.json`;
 
-    try {
+//     try {
 
-        console.log("trying to fetch json for:" + filePath);
+//         console.log("trying to fetch json for:" + filePath);
 
-        const response = await fetch(filePath);
+//         const response = await fetch(filePath);
 
-        // It's good practice to check if the response is successful, to catch HTTP errors.
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-        }
+//         // It's good practice to check if the response is successful, to catch HTTP errors.
+//         if (!response.ok) {
+//             throw new Error(`HTTP error! status: ${response.status}`);
+//         }
 
-        const data = await response.json();
+//         const data = await response.json();
 
-        // Reverse the link directions right after fetching the data.
-        reverseFlowAndColorize(data);
+//         // Reverse the link directions right after fetching the data.
+//         reverseFlowAndColorize(data);
 
-        // Return the processed data.
-        return data;
-    } catch (error) {
-        console.error(`There was a problem with the fetch operation for ${repoId}: `, error);
+//         // Return the processed data.
+//         return data;
+//     } catch (error) {
+//         console.error(`There was a problem with the fetch operation for ${repoId}: `, error);
 
-        return null;
-    }
-}
-
-
-export async function processLocalPath() {
-    var localPath = document.getElementById('local-path-input').value;
-
-
-    setInterval(() => {
-        checkForUpdates('repos_graph.json');
-    }, 5000); // Check every 5 seconds
-
-
-    fetch('http://127.0.0.1:7000/process/local', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ path: localPath })
-    })
-        .then(response => response.json())
-        .then(data => {
-            console.log(data);
-            alert('Local path processed successfully.');
-            loadNewGraph("repos");
-        })
-        .catch(error => {
-            console.error('Error:', error);
-            alert('Failed to process local path.');
-        });
-}
-
-
-
-export async function cloneAndProcessRepos() {
-    var repoUrls = document.getElementById('repo-urls-input').value.split('\n');
-
-    console.log("about to clone" + repoUrls);
-
-    setInterval(() => {
-        checkForUpdates('repos_graph.json');
-    }, 5000); // Check every 5 seconds
-
-    fetch('http://127.0.0.1:7000/clone_and_process', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ repo_urls: repoUrls })
-    })
-        .then(response => response.json())
-        .then(data => {
-            console.log(data);
-            // Instead of just calling the function, ensure it resolves first
-            loadNewGraph("repos_graph");
-
-            alert('Repositories processed successfully.');
-        })
-        .catch(error => {
-            console.error('Error:', error);
-            alert('Failed to clone and process repositories.');
-        });
-}
+//         return null;
+//     }
+// }
 
 // Function to initialize application data
 export async function loadFileTrees() {
     // Define the paths for your data files
     const paths = {
-        reposFileTrees: `${basePath}/index/repos_file_trees.json`,
+        reposFileTrees: `${basePath}/index/file_trees.json`,
         readmeData: `${basePath}/assets/repos_readme.json`
     };
 

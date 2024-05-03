@@ -126,7 +126,7 @@ def process_modules(root_dir):
     # assets_dir.mkdir(parents=True, exist_ok=True)
 
     # Define the file path
-    file_path = "./assets/files_graph.json"
+    file_path = "./assets/full_graph.json"
 
 
     with open(file_path, "w") as outfile:
@@ -197,14 +197,14 @@ def save_file_trees(file_trees) -> None:
 
     # Construct the path to your assets directory
     assets_dir = (
-        script_location.parent / "index"
+        script_location.parent.parent / "index"
     )  # Going up two levels to the assets directory
 
     # Make sure the directory exists (as before)
     assets_dir.mkdir(parents=True, exist_ok=True)
 
     # Define the file path
-    file_path = assets_dir / "repos_file_trees.json"
+    file_path = assets_dir / "file_trees.json"
 
     print(f"SAVING FILE TREES....")
     with open(file_path, "w") as file:

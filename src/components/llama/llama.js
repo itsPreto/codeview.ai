@@ -86,13 +86,15 @@ export function createReadmeSummaryPrompt(readmeData) {
     let displayMsg = null;
     let prompt = "You are a helpful assistant. Be concise and do not stray from the users' requests. Continue the conversation and ask any clarifying questions in order to best serve the user's needs.";
   
-    if (!appState.isAtTopLevel && fileData) {
+    if (fileData) {
       displayMsg = "Please summarize the following file: " + filePath.split('/').pop();
       prompt += createFileSummaryPrompt(fileData);
-    } else if (appState.isAtTopLevel && readmeData) {
+    } else if (readmeData) {
       displayMsg = "Please summarize the following README: " + readmeData.id;
       prompt += createReadmeSummaryPrompt(readmeData);
     }
+
+    console.log("augmented prompt" + prompt);
   
     // Use the llama function to process the prompt
     try {
@@ -106,9 +108,10 @@ export function createReadmeSummaryPrompt(readmeData) {
       messages.appendChild(responseElement);
   
       let content;
+
+      console.log("augmented prompt" + prompt);
   
       for await (const chunk of llama(prompt)) {
-        console.log(chunk);
         content += chunk;
         updateChatContext("Assistant" + chunk)
         displayResponseInChatbox(chunk, responseElement);  // Display response in UI

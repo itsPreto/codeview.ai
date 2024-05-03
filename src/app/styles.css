@@ -1,7 +1,7 @@
 body,
 html {
     margin: 0;
-    background-color: #00071c9c;
+    background-color: #00000091;
     height: 100%;
     overflow: hidden;
     font-family: 'Roboto', sans-serif;
@@ -18,10 +18,20 @@ html {
     height: 100%;
 }
 
+#save-button {
+    margin-left: 10px;
+    transition: all 0.2s ease-in-out;
+}
+
+#save-button:hover {
+    color: rgb(3, 186, 3);
+}
+
 .graph-container,
 .right-panel {
     padding: 10px;
     flex-grow: 1;
+    transition: all 0.5s ease-in-out;
     /* flex-basis: 36%; */
 }
 
@@ -53,11 +63,11 @@ html {
 .chat,
 .editor {
     flex: 1;
-    border: 0px solid #ccc;
+    /* border: 0px solid #ccc; */
 }
 
 .terminal {
-    /* background-color: #5095ad94; */
+    /* background-color: #b7ecfe00; */
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -75,7 +85,7 @@ html {
     flex-direction: column;
     border-radius: 10px;
     width: 100%;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 22 4px 6px rgba(0, 0, 0, 0.1);
     pointer-events: auto;
 }
 
@@ -94,7 +104,7 @@ html {
 }
 
 button {
-    color: white;
+    color: silver;
     border: none;
     padding: 10px 20px;
     border-radius: 4px;
@@ -114,6 +124,13 @@ textarea {
     width: 100%;
 }
 
+#main-header-container {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+}
+
 ::-webkit-scrollbar {
     width: 8px;
 }
@@ -131,16 +148,107 @@ textarea {
 }
 
 #fullscreen-bttn,
+#right-btn-container,
+#left-btn-container,
 #search-button {
-    position: absolute;
+    position: initial;
     top: 20px;
     z-index: 2;
+}
+
+.right-panel {
+    display: flex;
+    flex-direction: column;
+    transition: all 0.5s ease-in-out;
+    height: 100%;
+    /* Ensure full height */
+}
+
+.panel-section {
+    flex: 1;
+    transition: all 0.5s ease-in-out;
+    /* Default flex */
+    overflow: auto;
+    /* Adjust as necessary */
+}
+
+.panel-section, .panel-section.maximized, .panel-section.minimized {
+    transform: rotateX(0deg) rotateY(0deg);
+    transition: all 0.5s ease-in-out;
+    box-shadow: -13px 15px 20px 2px rgba(0, 0, 0, 0.5);
+}
+
+.panel-section.maximized {
+    transition: all 0.5s ease-in-out;
+    flex: 10;
+    /* Large flex to take up more space */
+}
+
+.panel-section.minimized {
+    flex: 0;
+    /* No space allocated */
+    height: 0;
+    transition: all 0.5s ease-in-out;
+    /* Hide the section */
+    overflow: hidden;
+    /* No scrollbars */
+}
+
+#settings-icon {
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    position: absolute;
+    bottom: 22px;
+    right: 100px;
+    font-size: 24px;
+    color: white;
+}
+
+.panel-section {
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Ensure full height of each section */
+  }
+  
+  #terminal-output, #messages {
+    flex: 1; /* Takes up all available space */
+    overflow-y: auto; /* Makes vertical scrollable */
+    margin: 0; /* Adjust margin as needed */
+    padding: 0 10px; /* Adjust padding as needed */
+  }
+
+.panel-header {
+    background-color: #f0f0f0;
+    padding: 10px;
+    font-size: larger;
+    color: black;
+    cursor: pointer;
+    justify-content: center;
+    transition: all 0.5s ease-in-out;
+    display: flex;
+    align-items: center;
+}
+
+.panel-header button {
+    background: none;
+    color: #7a7e81;
+    position: absolute;
+    transition: all 0.1s ease-in-out;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    right: 0;
+}
+
+.panel-header button:hover {
+    transform: scale(1.3);
+    color: #2b9be2;
 }
 
 .search-container {
     position: absolute;
     top: 20px;
-    left: 80px;
+    left: 12px;
     z-index: 2;
     max-width: 50vw;
     display: grid;
@@ -216,6 +324,17 @@ textarea {
 
 #fullscreen-bttn {
     position: absolute;
+    background: none;
+    right: 20px;
+    transform: scale(0.8);
+    transition: all 0.3s ease-in-out;
+    border: none;
+    color: white;
+    font-size: 24px;
+}
+
+#btn-container {
+    position: absolute;
     top: 8px;
     right: 9px;
     background: none;
@@ -228,8 +347,13 @@ textarea {
 
 #fullscreen-bttn:hover {
     color: lightblue;
-    transform: scale(1.7);
+    transform: scale(1.4);
 }
+
+#settings-icon:hover {
+    color: orange;
+    animation: spinClockwise 0.3s linear 1;
+  }
 
 #fullscreen-bttn:not(:hover) {
     transform: scale(0.8);
@@ -300,17 +424,22 @@ details {
 
 #graph-name {
     position: absolute;
+    transition: all 0.5s ease-in-out;
     color: #ffffffff;
-    margin-top: 20px;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%, 0);
+    top: -2px;
+    width: fit-content;
+    background: #0d475c;
+    padding: 10px;
+    left: 37%;
+    border-bottom-right-radius: 18px;
+    border-bottom-left-radius: 18px;
 }
 
 
 #chatbox {
     display: flex;
-    flex-direction: column;
+    overflow: hidden;
+    background: #f0f0f0;
     flex: 1;
     width: auto;
     justify-content: space-evenly;
@@ -319,14 +448,10 @@ details {
 .resizer {
     cursor: ew-resize;
     transition: all 0.5s ease-in-out;
-    /* Shows a horizontal resize cursor when hovering over the divider */
     background-color: #333;
-    /* Divider color */
+    padding: 5px;
     width: 10px;
-    /* Divider width */
-    padding: 4px;
     height: 100%;
-    /* Full-container height */
 }
 
 .resizer:hover {
@@ -364,18 +489,21 @@ details {
 
 #messages {
     flex: 1;
+    /* position: relative; */
     display: flex;
     flex-direction: column;
-    overflow-y: auto;
-    max-height: 18vh;
+    /* max-height: 18vh; */
     max-width: 77vmax;
     word-wrap: break-word;
     /* Breaks long words to ensure they don't overflow */
     padding: 7px;
+    background: #ff7f50c4;
     width: 100%;
-    border-radius: 16px;
+    border-top-left-radius: 36px;
+    border-top-right-radius: 36px;
+    border-bottom-right-radius: 12px;
     overflow-x: hidden;
-    overflow-y: auto;
+    /* overflow-y: auto; */
     transition: all 0.5s ease-in-out;
 }
 
@@ -387,7 +515,7 @@ details {
     padding-bottom: 9px;
     padding-left: 23px;
     align-self: end;
-    width: -webkit-fill-available;
+    width: fit-content;
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
     border-bottom-right-radius: 0px;
@@ -455,6 +583,7 @@ details {
 
 .CodeMirror-scroll {
     overflow: scroll !important;
+    min-height: 100vh;
     margin-bottom: -50px;
     margin-right: -50px;
     padding-bottom: 50px;
@@ -546,6 +675,16 @@ details {
         background-color: transparent
     }
 }
+
+@keyframes spinClockwise {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(180deg);
+    }
+  }
+  
 
 @-webkit-keyframes blink {
     50% {
@@ -711,8 +850,8 @@ div.CodeMirror span.CodeMirror-nonmatchingbracket {
 }
 
 .CodeMirror {
+    overflow-x: clip;
     position: relative;
-    overflow: hidden;
     background: #fff
 }
 
@@ -720,6 +859,7 @@ div.CodeMirror span.CodeMirror-nonmatchingbracket {
     /* overflow: scroll !important; */
     margin-right: 4px;
     outline: 0;
+    background: #16bdd55c;
     position: relative;
     z-index: 0
 }
@@ -952,17 +1092,6 @@ span.CodeMirror-selectedtext {
 }
 
 
-#overlay {
-    position: inherit;
-    width: -webkit-fill-available;
-    height: -webkit-fill-available;
-    background-color: rgba(0, 0, 0, 0.5);
-    cursor: pointer;
-}
-
-
-
-
 #input-container {
     display: flex;
     align-items: center;
@@ -979,9 +1108,11 @@ span.CodeMirror-selectedtext {
     background-color: #030303d1;
     padding: 8px;
     color: beige;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    border: 4px solid #4d36a34a;
     resize: none;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 
 #send-button {
@@ -1026,10 +1157,9 @@ span.CodeMirror-selectedtext {
     flex: 1;
     /* Grow to take up all available space */
 }
-
-.navUp-bttn {
+#navUp-bttn {
     position: absolute;
-    top: 3px;
+    bottom: 3px;
     z-index: 3;
     margin-top: 20px;
     margin-right: 20px;
@@ -1039,7 +1169,6 @@ span.CodeMirror-selectedtext {
     color: black;
     left: 14px;
     display: inline;
-    background-color: #ff9ae994;
 }
 
 
@@ -1049,9 +1178,10 @@ span.CodeMirror-selectedtext {
     transition: all 0.5s ease-in-out;
     text-wrap: balance;
     padding: 20px;
-    border-radius: 8px;
+    border-radius: 16px;
     overflow: auto;
-    height: 21vh
+    background-color: #323232;
+    height: 100%;
 }
 
 #terminal-input {
@@ -1100,11 +1230,6 @@ span.CodeMirror-selectedtext {
     height: auto;
     max-width: -webkit-fill-available;
     border-radius: 0 0 10px 10px;
-}
-
-.CodeMirror-scroll {
-    min-height: 24vh;
-    max-height: 24vh;
 }
 
 .title {
@@ -1255,19 +1380,56 @@ span.CodeMirror-selectedtext {
     display: none;
 }
 
-.overlay {
+
+#overlay {
     position: absolute;
-    top: 0;
-    height: 100vh;
-    width: 100%;
-    background-color: rgba(82, 76, 76, 0.35);
-    /*targeting Chrome & Safari*/
-    display: -webkit-flex;
-    /*targeting IE10*/
-    display: -ms-flex;
+    bottom: -100%;
+    /* Start off the screen */
+    width: inherit;
+    height: 60%;
+    transform: translateX(42%);
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+    background: #005068c4;
     display: flex;
     justify-content: center;
-    /*horizontal centering*/
+    align-items: center;
+    transition: bottom 0.5s ease;
+    /* Smooth transition for the bottom property */
+}
+
+#input-form {
+    padding: 24px;
+    background: #333;
+    display: grid;
+    cursor: grab;
+    border-radius: 20px;
+    color: #262626;
+}
+
+#input-form textarea {
+    width: 300px;
+    height: 80px;
+    margin-bottom: 10px;
+    color: black;
+}
+
+#input-form button {
+    width: 58%;
+    padding: 12px;
+    cursor: pointer;
+    margin: 6px;
+    border-radius: 12px;
+    background: black;
+    justify-self: center;
+    margin-bottom: 10px;
+}
+
+#loading-spinner {
+    display: none;
+    font-size: 1.5em;
+    color: white;
+    flex-direction: column-reverse;
     align-items: center;
 }
 
@@ -1352,9 +1514,6 @@ span.CodeMirror-selectedtext {
     -moz-animation-delay: .8s;
     -o-animation-delay: .8s;
 }
-
-/* Add perspective to the parent container */
-.right-panel {}
 
 /* Add individual styles for each card with transformation and shadow */
 .terminal,

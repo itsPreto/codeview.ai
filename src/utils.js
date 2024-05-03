@@ -259,6 +259,7 @@ export function getFullHeight(element) {
 }
 
 export function reverseFlowAndColorize(data) {
+
     reverseLinkDirections(data.links);
 
     const nodesToAdd = [...data.nodes];

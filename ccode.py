@@ -127,9 +127,10 @@ def clone_and_process():
 
 @app.route('/get-last-modified/<json_file_name>')
 def get_last_modified(json_file_name):
-    path = os.path.join(app.root_path, 'data', json_file_name)
+    path = os.path.join(app.root_path, 'assets', json_file_name)
     try:
         last_modified = os.path.getmtime(path)
+        print(f"file {path} last modified: {last_modified}")
         return jsonify({'last_modified': last_modified}), 200
     except OSError:
         return jsonify({'error': 'File not found'}), 404
