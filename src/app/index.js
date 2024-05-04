@@ -159,7 +159,10 @@ async function initializeGraph(graphData, level, nodeId) {
   // }
 
   await clusterIsolatedNodes(); // Ensure isolated nodes are clustered on initialization
-  setupCameraOrbit();
+
+  if (currentLevel === GRAPH_LEVELS.MODULES) {
+    setupCameraOrbit();
+  }
   Graph.refresh();
 
   // Adjust top button for navigation
@@ -252,13 +255,10 @@ async function fetchJson(filePath, level, nodeId) {
 // Update the top button to reflect possible actions based on current level
 function updateTopButton() {
   if (currentLevel === GRAPH_LEVELS.MODULES) {
-    topButton.textContent = 'full';
     topButton.onclick = () => fetchAndInitializeGraph(GRAPH_LEVELS.INSANITY);
   } else if (currentLevel === GRAPH_LEVELS.INSANITY) {
-    topButton.textContent = 'modules';
     topButton.onclick = () => fetchAndInitializeGraph(GRAPH_LEVELS.MODULES);
   } else if (currentLevel === GRAPH_LEVELS.FILES) {
-    topButton.textContent = 'modules';
     topButton.onclick = () => fetchAndInitializeGraph(GRAPH_LEVELS.MODULES);
   }
 }
@@ -311,7 +311,7 @@ export async function applyPackageForce(alpha) {
 
   // Dynamically adjust strengths based on graph size
   const attractionStrength = -284;
-  const repulsionStrength = 17790;
+  const repulsionStrength = 7790;
 
   const nodes = graphData.nodes;
 
@@ -496,25 +496,36 @@ function createFPSCounter() {
 
 
 function toggleFullScreen() {
+  const container = document.getElementById('graph-container');
   if (!document.fullscreenElement) {
+    // tooltip.style.display = "none";
     chatboxContainer.style.display = "none";
     topButton.style.display = "none";
     // searchContainer.style.display = "none";
-    graphContainer.requestFullscreen();
+    container.requestFullscreen();
     elem.style.width = screen.width + 'px';
     elem.style.height = screen.height + 'px';
 
     // Update graph dimensions
     Graph.width(screen.width);
     Graph.height(screen.height);
+    Graph.refresh();
   } else {
     if (document.exitFullscreen) {
+      elem.style.width = (screen.width / 2) + 'px';
+      elem.style.height = (screen.height) + 'px';
+  
+      // Update graph dimensions
+      Graph.width(screen.width / 2);
+      Graph.height(screen.height);
+      Graph.refresh();
       // Remove event listener before exiting fullscreen
       document.removeEventListener('fullscreenchange', handleFullscreenChange);
       document.exitFullscreen();
     }
   }
 }
+
 
 
 function toggleOverlay() {
@@ -526,6 +537,7 @@ function toggleOverlay() {
 // Function to handle fullscreen change
 function handleFullscreenChange() {
   if (!document.fullscreenElement) {
+    tooltip.style.display = "block";
     chatboxContainer.style.display = "block";
     topButton.style.display = "block";
     // searchContainer.style.display = "block";
@@ -535,8 +547,11 @@ function handleFullscreenChange() {
     // Update graph dimensions
     Graph.width(window.innerWidth / 2);
     Graph.height(window.innerHeight);
-  }
+  } 
 }
+
+// Add event listener for fullscreen change
+document.addEventListener('fullscreenchange', handleFullscreenChange);
 
 
 let percent = 0;
@@ -767,13 +782,10 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  // Add event listener for fullscreen change
-  document.addEventListener('fullscreenchange', handleFullscreenChange);
-
   createFPSCounter();
 
   window.addEventListener('resize', () => {
-    Graph.width(window.innerWidth / 2);
+    Graph.width(window.innerWidth);
     Graph.height(window.innerHeight);
   });
 

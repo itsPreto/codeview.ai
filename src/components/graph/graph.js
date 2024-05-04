@@ -6,7 +6,7 @@ console.log("Using function from utils.js", getOrbitAllowed());
 
 export const elem = document.getElementById('3d-graph');
 
-export const Graph = ForceGraph3D({ controlType: 'orbit' })(elem)
+export const Graph = ForceGraph3D({ controlType: 'trackball' })(elem)
 
 export const chatbox = document.getElementById('messages')
 

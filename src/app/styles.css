@@ -1,7 +1,7 @@
 body,
 html {
     margin: 0;
-    background-color: #00000091;
+    background-color: #8c585891;
     height: 100%;
     overflow: hidden;
     font-family: 'Roboto', sans-serif;
@@ -1177,9 +1177,13 @@ span.CodeMirror-selectedtext {
     white-space: pre-wrap;
     transition: all 0.5s ease-in-out;
     text-wrap: balance;
+    /* background: #e5e55e; */
     padding: 20px;
-    border-radius: 16px;
+    border-bottom-left-radius: 0;
     overflow: auto;
+    /* border-top-left-radius: 20px; */
+    /* border-top-right-radius: 46px; */
+    /* border-bottom-right-radius: 16px; */
     background-color: #323232;
     height: 100%;
 }
@@ -1228,8 +1232,8 @@ span.CodeMirror-selectedtext {
 
 .CodeMirror {
     height: auto;
+    /* border-radius: 16px; */
     max-width: -webkit-fill-available;
-    border-radius: 0 0 10px 10px;
 }
 
 .title {
@@ -1522,6 +1526,7 @@ span.CodeMirror-selectedtext {
     transform: rotateX(4deg) rotateY(5deg);
     /* box-shadow: -3px 7px 11px 4px rgb(93 219 222 / 17%); */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: #f0f0f0;
     margin-top: 15px;
     /* Adjust margin to prevent overlap */
 }
